@@ -106,8 +106,8 @@
             <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-extrabold shadow-xl hover:bg-blue-700 transition transform active:scale-95">MASUK SEKARANG</button>
             <div class="text-center text-slate-400 text-xs py-4">Atau masuk dengan</div>
             <div class="grid grid-cols-2 gap-4">
-              <button type="button" class="border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition"><i class="fab fa-google mr-2 text-red-500"></i> Google</button>
-              <button type="button" class="border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition"><i class="fab fa-facebook-f mr-2 text-blue-600"></i> Facebook</button>
+              <button id="google-login" type="button" class="border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition"><i class="fab fa-google mr-2 text-red-500"></i> Google</button>
+              <button id="facebook-login" type="button" class="border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition"><i class="fab fa-facebook-f mr-2 text-blue-600"></i> Facebook</button>
             </div>
           </form>
 
@@ -140,8 +140,8 @@
             <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-extrabold shadow-xl hover:bg-blue-700 transition transform active:scale-95">DAFTAR SEKARANG</button>
             <div class="text-center text-slate-400 text-xs py-4">Atau daftar dengan</div>
             <div class="grid grid-cols-2 gap-4">
-              <button type="button" class="border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition"><i class="fab fa-google mr-2 text-red-500"></i> Google</button>
-              <button type="button" class="border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition"><i class="fab fa-facebook-f mr-2 text-blue-600"></i> Facebook</button>
+              <button id="google-register" type="button" class="border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition"><i class="fab fa-google mr-2 text-red-500"></i> Google</button>
+              <button id="facebook-register" type="button" class="border border-slate-200 py-3 rounded-xl hover:bg-slate-50 transition"><i class="fab fa-facebook-f mr-2 text-blue-600"></i> Facebook</button>
             </div>
           </form>
         </div>
@@ -176,7 +176,7 @@
                 <a href="acara.html" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Jadwal Rekrutmen</a>
               </li>
               <li>
-                <a href="auth.html" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Tutorial Pendaftaran</a>
+                <a href="tutorial-pendaftaran.html" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Tutorial Pendaftaran</a>
               </li>
               <li>
                 <a href="tracer.html" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Tracer Study</a>
@@ -278,6 +278,50 @@
           window.location.href = "profil.html";
         }
       });
-    </script>
+
+      function setSocialLogin(provider, name, email) {
+        const existingName = localStorage.getItem("userName");
+        const finalName = existingName || name;
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userNIK", localStorage.getItem("userNIK") || email || provider + " User");
+        localStorage.setItem("userName", finalName);
+        localStorage.setItem("userEmail", email || localStorage.getItem("userEmail") || "-");
+        localStorage.setItem("loginProvider", provider);
+        window.location.href = "profil.html";
+      }
+
+      function handleSocialClick(provider) {
+        const name = prompt(`Masukkan nama lengkap Anda:`);
+        if (!name || name.trim() === '') {
+          alert("Nama lengkap dibutuhkan untuk melanjutkan.");
+          return;
+        }
+
+        const email = prompt(`Masukkan email ${provider} Anda:`);
+        if (!email) {
+          alert("Email dibutuhkan untuk melanjutkan.");
+          return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          alert("Silakan masukkan email yang valid.");
+          return;
+        }
+
+        setSocialLogin(provider, name.trim(), email);
+      }
+
+      document.getElementById("google-login").addEventListener("click", function () {
+        handleSocialClick("Google");
+      });
+      document.getElementById("facebook-login").addEventListener("click", function () {
+        handleSocialClick("Facebook");
+      });
+      document.getElementById("google-register").addEventListener("click", function () {
+        handleSocialClick("Google");
+      });
+      document.getElementById("facebook-register").addEventListener("click", function () {
+        handleSocialClick("Facebook");
+      });    </script>
   </body>
 </html>

@@ -34,7 +34,7 @@
           </div>
 
           <!-- Auth Buttons -->
-          <div class="hidden lg:flex items-center space-x-4">
+          <div class="lg:flex items-center space-x-4">
             <a href="auth.html" class="text-sm font-bold hover:text-blue-400 transition">Daftar</a>
             <a href="auth.html" class="bg-blue-600 hover:bg-blue-700 px-7 py-2.5 rounded-full text-sm font-bold shadow-lg transition transform hover:scale-105 active:scale-95">Masuk</a>
           </div>
@@ -142,7 +142,7 @@
                 <a href="acara.html" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Jadwal Rekrutmen</a>
               </li>
               <li>
-                <a href="auth.html" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Tutorial Pendaftaran</a>
+                <a href="tutorial-pendaftaran.html" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Tutorial Pendaftaran</a>
               </li>
               <li>
                 <a href="tracer.html" class="hover:text-blue-400 transition flex items-center"><i class="fas fa-chevron-right text-[10px] mr-2"></i> Tracer Study</a>
@@ -180,5 +180,23 @@
     </footer>
 
     <script src="js/utils.js"></script>
+    <script>
+      function logout() {
+        if (confirm("Apakah Anda yakin ingin logout?")) {
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("userName");
+          localStorage.removeItem("userNIK");
+          localStorage.removeItem("userEmail");
+          localStorage.removeItem("loginProvider");
+          window.location.href = window.location.href;
+        }
+      }
+
+      function updateAuthUI() {
+        // No auth UI to update - navbar stays clean
+      }
+
+      window.addEventListener("load", updateAuthUI);
+    </script>
   </body>
 </html>
