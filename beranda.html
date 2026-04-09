@@ -8,92 +8,64 @@
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
       <link rel="stylesheet" href="css/style.css" />
-      <style>
+       <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+        }
+        
         @keyframes zoomInUp {
-          from {
-            opacity: 0;
-            transform: scale(0.85) translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-          }
+            from { opacity: 0; transform: scale(0.85) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
         }
-
-        @keyframes cardZoom {
-          0% {
-            transform: scale(1);
-          }
-          100% {
-            transform: scale(1.02);
-          }
-        }
-
-        .animate-zoom-in {
-          animation: zoomInUp 0.6s ease-out forwards;
-        }
-
-        .card-zoom:hover {
-          transform: scale(1.02);
-        }
-
-        .card-zoom {
-          transition: transform 0.3s ease-out;
-        }
-
-        .stat-card {
-          animation: zoomInUp 0.8s ease-out backwards;
-        }
-
-        .stat-card:nth-child(1) {
-          animation-delay: 0s;
-        }
-        .stat-card:nth-child(2) {
-          animation-delay: 0.1s;
-        }
-        .stat-card:nth-child(3) {
-          animation-delay: 0.2s;
-        }
-        .stat-card:nth-child(4) {
-          animation-delay: 0.3s;
-        }
-
-        .job-card {
-          animation: zoomInUp 0.8s ease-out backwards;
-        }
-
-        .job-card:nth-child(1) {
-          animation-delay: 0.1s;
-        }
-        .job-card:nth-child(2) {
-          animation-delay: 0.2s;
-        }
-        .job-card:nth-child(3) {
-          animation-delay: 0.3s;
-        }
-
-        .divider-line {
-          background: linear-gradient(to right, transparent, rgb(226, 232, 240), transparent);
-          height: 2px;
-        }
-
-        .section-header {
-          position: relative;
-          padding: 16px 0;
-        }
-
+        .animate-zoom-in { animation: zoomInUp 0.6s ease-out forwards; }
+        .card-zoom { transition: transform 0.3s ease-out; }
+        .card-zoom:hover { transform: scale(1.02); }
+        .stat-card { animation: zoomInUp 0.8s ease-out backwards; }
+        .job-card { animation: zoomInUp 0.8s ease-out backwards; }
+        
+        .section-header { position: relative; padding: 16px 0; }
         .section-header::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 50%;
-          width: 4px;
-          height: 30px;
-          background: linear-gradient(180deg, #2563eb, #1d4ed8);
-          border-radius: 2px;
-          transform: translateY(-50%);
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(180deg, #2563eb, #1d4ed8);
+            border-radius: 2px;
+            transform: translateY(-50%);
         }
-      </style>
+
+        .hero-bg {
+            background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.85)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .custom-shadow {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+        }
+
+        .custom-input {
+            background-color: #f8fafc;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .custom-input:focus {
+            background-color: #ffffff;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Hide scrollbar */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
     </head>
     <body class="bg-slate-50 text-slate-900" data-page="beranda">
       <!-- Navigation -->
@@ -387,6 +359,62 @@
           <div class="divider-line"></div>
         </div>
 
+        <!-- Kisah Sukses Alumni -->
+    <section class="py-20 bg-slate-50 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="section-header mb-12">
+                <h2 class="text-3xl font-extrabold text-[#001f3f] pl-6">Kisah Sukses Alumni</h2>
+                <p class="text-slate-500 mt-2 pl-6">Inspirasi karir dari para lulusan terbaik</p>
+            </div>
+
+            <!-- Form Card -->
+            <div class="max-w-2xl mx-auto bg-white rounded-[40px] custom-shadow p-10 md:p-12 mb-20 relative animate-zoom-in">
+                <div class="text-center mb-8">
+                    <span class="bg-slate-100 px-5 py-1.5 rounded-full text-slate-400 font-bold text-[10px] uppercase tracking-widest">Berbagi Kisah</span>
+                    <h3 class="text-2xl md:text-3xl font-bold italic text-slate-800 mt-6 tracking-tight">"Tulis kisah suksesmu di sini"</h3>
+                </div>
+
+                <div class="space-y-4 max-w-md mx-auto text-left">
+                    <input type="text" id="alumniName" placeholder="Nama Anda" class="w-full px-5 py-3.5 custom-input rounded-xl focus:outline-none text-sm font-medium">
+                    <input type="text" id="alumniJob" placeholder="Pekerjaan & Instansi (Contoh: Staff - PT. Maju)" class="w-full px-5 py-3.5 custom-input rounded-xl focus:outline-none text-sm font-medium">
+                    <textarea id="alumniStory" placeholder="Komentar singkat..." rows="3" class="w-full px-5 py-3.5 custom-input rounded-xl focus:outline-none text-sm font-medium"></textarea>
+                    
+                    <button onclick="saveStory()" class="w-full bg-[#001f3f] text-white py-4 rounded-xl font-bold flex items-center justify-center space-x-2 hover:bg-slate-800 transition shadow-lg mt-6">
+                        <span class="tracking-widest uppercase text-sm">KIRIM</span>
+                        <span class="opacity-60 font-light italic text-xs">#kisahmu</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Divider -->
+        <div class="container mx-auto px-6 py-8">
+          <div class="divider-line"></div>
+        </div>
+
+            <!-- Testimonials Slider Container -->
+            <div class="relative group" onmouseenter="stopAutoScroll()" onmouseleave="startAutoScroll()">
+                <!-- Nav Panah -->
+                <button onclick="scrollTestimonials(-400)" class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full text-blue-600 items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+                
+                <div id="testimonialContainer" class="flex space-x-6 overflow-x-auto no-scrollbar scroll-smooth pb-10 px-4">
+                    <!-- Data Testimoni -->
+                </div>
+
+                <button onclick="scrollTestimonials(400)" class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full text-blue-600 items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Divider -->
+        <div class="container mx-auto px-6 py-8">
+          <div class="divider-line"></div>
+        </div>
+
         <!-- Partner Companies Section -->
         <section class="bg-gradient-to-b from-white to-slate-100 py-20">
           <div class="container mx-auto px-6 text-center">
@@ -490,24 +518,87 @@
         </div>
       </footer>
 
-      <script src="js/utils.js"></script>
       <script>
-        function logout() {
-          if (confirm("Apakah Anda yakin ingin logout?")) {
-            localStorage.removeItem("isLoggedIn");
-            localStorage.removeItem("userName");
-            localStorage.removeItem("userNIK");
-            localStorage.removeItem("userEmail");
-            localStorage.removeItem("loginProvider");
-            window.location.href = window.location.href;
-          }
+        const defaultStories = [
+            { name: "Ade Rahmawan", job: "Operator - Astra Honda", story: "BKK sangat membantu saya mendapatkan karir impian di industri otomotif tak lama setelah lulus." },
+            { name: "Siti Nurhaliza", job: "QC - PT. Epson Indonesia", story: "Pelatihan interview di BKK benar-benar bermanfaat saat menghadapi rekrutmen perusahaan." },
+            { name: "Rudi Baharudin", job: "IT Support - Telkom", story: "Terima kasih BKK SMKN 1 Garut atas bimbingan dan info lowongan yang selalu update." },
+            { name: "Dina Mariana", job: "Admin - Bank Mandiri", story: "Informasi yang diberikan BKK sangat akurat dan prosesnya cepat." },
+            { name: "Fahmi Aziz", job: "Teknisi - Yamaha Music", story: "Sangat bersyukur ada BKK, saya dapat kerja kurang dari sebulan setelah lulus." }
+        ];
+
+        let autoScrollInterval;
+
+        function loadStories() {
+            const container = document.getElementById('testimonialContainer');
+            const savedStories = JSON.parse(localStorage.getItem('alumniStories')) || [];
+            const allStories = [...savedStories, ...defaultStories];
+            
+            container.innerHTML = '';
+            
+            allStories.forEach(item => {
+                const initials = item.name.split(' ').map(n => n[0]).join('').substring(0,2).toUpperCase();
+                const colors = ['bg-blue-600', 'bg-green-500', 'bg-purple-600', 'bg-orange-500', 'bg-red-500'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+                const card = `
+                    <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-left flex-shrink-0 card-zoom">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 ${randomColor} rounded-full flex items-center justify-center text-white font-bold text-xs mr-3">${initials}</div>
+                            <div>
+                                <h5 class="font-bold text-sm text-slate-800">${item.name}</h5>
+                                <p class="text-[9px] text-slate-400 font-medium uppercase">${item.job}</p>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-slate-600 leading-relaxed italic">"${item.story}"</p>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
         }
 
-        function updateAuthUI() {
-          // No auth UI to update - navbar stays clean
+        function saveStory() {
+            const name = document.getElementById('alumniName').value;
+            const job = document.getElementById('alumniJob').value;
+            const story = document.getElementById('alumniStory').value;
+
+            if(!name || !job || !story) return;
+
+            const newStory = { name, job, story };
+            const savedStories = JSON.parse(localStorage.getItem('alumniStories')) || [];
+            savedStories.unshift(newStory);
+            localStorage.setItem('alumniStories', JSON.stringify(savedStories));
+
+            document.getElementById('alumniName').value = '';
+            document.getElementById('alumniJob').value = '';
+            document.getElementById('alumniStory').value = '';
+
+            loadStories();
+            document.getElementById('testimonialContainer').scrollLeft = 0;
         }
 
-        window.addEventListener("load", updateAuthUI);
-      </script>
-    </body>
-  </html>
+        function scrollTestimonials(amount) {
+            const container = document.getElementById('testimonialContainer');
+            container.scrollLeft += amount;
+        }
+
+        function startAutoScroll() {
+            const container = document.getElementById('testimonialContainer');
+            autoScrollInterval = setInterval(() => {
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+                    container.scrollLeft = 0;
+                } else {
+                    container.scrollLeft += 1;
+                }
+            }, 30);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        window.onload = () => {
+            loadStories();
+            startAutoScroll();
+        };
+    </script>
