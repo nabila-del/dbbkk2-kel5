@@ -1,3 +1,2 @@
-2026/05/19-07:23:56.830 51ec Reusing MANIFEST C:\ikbAL\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/05/19-07:23:56.845 51ec Recovering log #3
-2026/05/19-07:23:56.848 51ec Reusing old log C:\ikbAL\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Local Storage\leveldb/000003.log 
+2026/05/19-10:02:55.705 25bc Creating DB C:\aurelbkk\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Local Storage\leveldb since it was missing.
+2026/05/19-10:02:55.738 25bc Reusing MANIFEST C:\aurelbkk\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Local Storage\leveldb/MANIFEST-000001
