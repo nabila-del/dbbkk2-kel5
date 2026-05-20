@@ -53,7 +53,7 @@
                     <span class="font-bold text-lg tracking-wider hidden md:block">BKK SMKN 1 GARUT</span>
                 </div>
 
-                <!-- Navigation Menu -->
+                <!-- Menu Navigasi -->
                 <nav class="hidden lg:flex space-x-8 text-sm font-medium">
                     <a href="tips.html" class="hover:text-blue-300 transition duration-150">Beranda</a>
                     <a href="#" class="hover:text-blue-300 transition duration-150">Lowongan</a>
@@ -87,17 +87,10 @@
         </div>
     </header>
 
-    <!-- BREADCRUMB & BACK BUTTON -->
+    <!-- TOMBOL KEMBALI DI SEBELAH KIRI (Breadcrumb bersih, tombol digeser ke kiri menggunakan justify-start) -->
     <div class="bg-slate-100 border-b border-slate-200 py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
-            <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-500">
-                <a href="tips.html" class="hover:text-blue-600 transition">BKK SMKN 1 Garut</a>
-                <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                <a href="tips.html" class="hover:text-blue-600 transition">Tips Karir</a>
-                <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                <span class="text-slate-800 font-medium truncate max-w-[200px] md:max-w-xs" id="breadcrumb-title">Detail Panduan</span>
-            </div>
-            <a href="tips.html" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-start">
+            <a href="tips.html" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition flex-shrink-0">
                 <i class="fa-solid fa-arrow-left mr-2"></i> Kembali ke Daftar Tips
             </a>
         </div>
@@ -217,7 +210,7 @@
                         </div>
                         <h3 class="text-lg font-bold">Kesalahan Umum yang Harus Dihindari</h3>
                     </div>
-                    <ul class="space-y-3 text-sm md:text-base text-slate-700 pl-4 list-disc" id="detail-avoid-mistakes">
+                    <ul class="space-y-3 text-sm md:text-base text-slate-700 pl-4 list-disc" id="detail-avoid-white">
                         <!-- Kesalahan umum dinamis -->
                     </ul>
                 </div>
@@ -392,10 +385,13 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         // Data Artikel Karir Lengkap dengan Langkah-Langkah (Step-by-Step) detail
+        // Disinkronkan dengan kartu utama di halaman tips.html:
+        // ID 1: Kelebihan & Kekurangan Saat Interview (Menjadi default muat halaman)
+        // ID 2: CV, ID 3: Interview, ID 4: Skill, ID 5: Attitude, ID 6: Wirausaha
         const tipsData = [
             {
                 id: 1,
-                title: " Pertanyaan Kelebihan & Kekurangan Saat Interview",
+                title: "Cara Menjawab Pertanyaan Kelebihan & Kekurangan Saat Interview",
                 category: "Interview",
                 summary: "Pelajari trik psikologi menjawab kelemahan tanpa merusak prospek kerjamu di hadapan HRD perusahaan.",
                 date: "12 Mei 2026",
@@ -428,72 +424,105 @@
             },
             {
                 id: 2,
-                title: "Panduan Menaklukkan Psikotes Wartegg & Gambar Pohon",
-                category: "Psikotes",
-                summary: "Tips analisis gambar untuk menunjukkan potensi kreativitas dan kestabilan emosi Anda.",
-                date: "05 Mei 2026",
+                title: "Cara Membuat CV yang Menarik HRD",
+                category: "CV",
+                summary: "Pelajari cara membuat CV profesional yang bisa meningkatkan peluang diterima kerja meskipun belum punya pengalaman.",
+                date: "12 Mei 2026",
                 steps: [
                     {
-                        title: "Kuasai Esensi 8 Kotak Wartegg",
-                        desc: "Setiap kotak memiliki stimulus coretan yang mewakili aspek psikologi berbeda. Contoh: Kotak 1 (titik pusat) mewakili adaptasi diri; Kotak 2 (garis melengkung) mewakili sensibilitas/kehidupan sosial; Kotak 3 (3 garis tegak naik) mewakili motivasi prestasi. Gambarlah objek hidup/dinamis pada stimulus lengkung, dan objek mati/geometris pada stimulus garis kaku."
+                        title: "Tulis Informasi Kontak yang Jelas & Profesional",
+                        desc: "Letakkan nama lengkap, nomor telepon aktif, alamat email profesional (contoh: nama.anda@email.com), domisili saat ini, serta tautan portofolio atau LinkedIn di bagian paling atas CV Anda."
                     },
                     {
-                        title: "Atur Urutan Menggambar Secara Fleksibel",
-                        desc: "Jangan menggambar terlalu berurutan dari nomor 1 sampai 8 karena Anda dinilai terlalu kaku (rigid). Sebaliknya, jangan juga terlalu acak-acakan karena Anda akan dinilai tidak konsisten atau kurang teratur. Gunakan kombinasi urutan menengah (misal: 1, 2, 3, 4, 8, 7, 6, 5)."
+                        title: "Buat Deskripsi Diri (Professional Summary) yang Ringkas",
+                        desc: "Tulis 3-4 kalimat ringkas yang menjelaskan latar belakang jurusan SMK Anda, keahlian utama, minat karir, serta tekad kontribusi Anda bagi posisi yang dilamar."
                     },
                     {
-                        title: "Menggambar Pohon yang Proporsional (Tree Test)",
-                        desc: "Saat diminta menggambar pohon, gambarlah pohon berkambium (dikotil) yang berkayu, bercabang, dan memiliki buah atau daun yang jelas (misalnya: pohon mangga, nangka, atau jati). Pastikan ada akar yang menancap kuat di tanah (stabilitas emosi), batang yang proporsional (kekuatan ego), dan tajuk daun yang rindang (interaksi sosial)."
+                        title: "Tonjolkan Pengalaman Magang (PKL) atau Proyek Sekolah",
+                        desc: "Sebagai lulusan SMK baru, ceritakan detail tugas Anda saat melaksanakan Praktek Kerja Lapangan (PKL) atau proyek ujian kompetensi kejuruan. Sebutkan tanggung jawab serta pencapaian yang berhasil Anda raih."
                     },
                     {
-                        title: "Perhatikan Ketebalan Garis dan Kebersihan",
-                        desc: "Garis yang digambar terlalu tipis menunjukkan keraguan dan kurang percaya diri, sedangkan garis yang ditekan terlalu tebal hingga kertas hampir robek menandakan kecenderungan impulsif atau ketegangan emosional. Jaga kertas psikotes tetap bersih tanpa banyak coretan bekas penghapus."
+                        title: "Susun Riwayat Pendidikan & Daftar Keahlian Kejuruan",
+                        desc: "Sebutkan nama sekolah dan tahun kelulusan Anda. Setelah itu, tulis keterampilan teknis (hard skills) yang relevan (misal: Instalasi Jaringan, Pembukuan Akuntansi, Coding PHP) serta soft skills pendukung kerja."
                     }
                 ],
                 proTips: [
-                    "Bawa pensil tipe HB dan 2B yang berkualitas baik dan tajam ke ruang ujian.",
-                    "Latihlah sketsa dasar pohon dan manusia beberapa hari sebelum jadwal psikotes dilaksanakan."
+                    "Gunakan desain CV satu kolom yang bersih dan hindari penggunaan grafik bar tingkat keahlian agar ramah sistem ATS.",
+                    "Simpan dan kirim dokumen CV Anda selalu dalam format PDF."
                 ],
                 avoidMistakes: [
-                    "Menggambar pohon kelapa, pisang, bambu, atau semak belukar karena bukan merupakan klasifikasi pohon berkambium tinggi dalam alat ukur psikotes.",
-                    "Menggambar objek wartegg berbau kekerasan (seperti senjata tajam atau kecelakaan)."
+                    "Menggunakan alamat email informal atau kekanak-kanakan (misal: anak_gaul_99@email.com).",
+                    "Menulis informasi pengalaman atau kemampuan yang tidak jujur (palsu)."
                 ]
             },
             {
                 id: 3,
-                title: "Strategi ATS-Friendly CV untuk Lulusan SMK Baru",
-                category: "CV & Portofolio",
-                summary: "Buat CV kamu terbaca oleh sistem robot filter perusahaan besar agar berkesempatan diwawancarai.",
-                date: "28 April 2026",
+                title: "Tips Lolos Interview Kerja Pertama",
+                category: "Interview",
+                summary: "Persiapkan dirimu menghadapi HRD dengan memahami pertanyaan umum dan cara menjawab yang percaya diri.",
+                date: "05 Mei 2026",
                 steps: [
                     {
-                        title: "Gunakan Layout Satu Kolom yang Bersih",
-                        desc: "Sistem ATS (Applicant Tracking System) membaca teks dari kiri ke kanan dan atas ke bawah. Layout dua kolom atau kolom yang rumit berisiko membuat sistem salah membaca urutan pengalaman kerja atau pendidikan Anda."
+                        title: "Lakukan Riset Mengenai Perusahaan dan Peran yang Dilamar",
+                        desc: "Sebelum interview, cari tahu bidang usaha perusahaan, produk yang mereka tawarkan, serta kualifikasi dan tanggung jawab pekerjaan dari posisi yang Anda lamar."
                     },
                     {
-                        title: "Pilih Font Standar yang Mudah Terbaca",
-                        desc: "Hindari penggunaan font dekoratif atau script yang estetik tapi tidak ramah mesin. Gunakan font universal seperti Arial, Helvetica, Calibri, atau Georgia dengan ukuran berkisar 10 - 12 pt untuk teks utama."
+                        title: "Latih Jawaban untuk Pertanyaan-Pertanyaan Umum",
+                        desc: "Latih cara menceritakan perkenalan diri Anda secara profesional, kelebihan dan kekurangan Anda dengan metode STAR (Situation, Task, Action, Result)."
                     },
                     {
-                        title: "Gunakan Kata Kunci (Keywords) dari Deskripsi Pekerjaan",
-                        desc: "Mesin ATS menyaring CV berdasarkan persentase kecocokan kata kunci dalam CV dengan kualifikasi lowongan. Masukkan terminologi teknis jurusan SMK-mu yang dicari industri (misal: 'Pemeliharaan Jaringan', 'Troubleshooting', 'Laravel', 'Akuntansi Jasa')."
+                        title: "Kuasai Bahasa Tubuh yang Sopan dan Percaya Diri",
+                        desc: "Jaga kontak mata yang baik dengan pewawancara, berikan senyuman ramah, duduklah dengan tegak dan sopan, serta hindari gerakan tubuh gelisah yang menunjukkan rasa gugup."
                     },
                     {
-                        title: "Simpan dalam Format PDF yang Tepat",
-                        desc: "Simpan dokumen Anda dengan format penamaan profesional yang jelas, contoh: `CV_NamaLengkap_PosisiMelamar.pdf`. Pastikan teks di dalam PDF bisa diblok dan disalin (bukan PDF hasil scan gambar)."
+                        title: "Siapkan Pertanyaan Menarik untuk HRD di Akhir Sesi",
+                        desc: "Ketika diberikan kesempatan bertanya, ajukan pertanyaan berbobot terkait budaya kerja perusahaan atau langkah seleksi berikutnya untuk menunjukkan antusiasme tinggi Anda."
                     }
                 ],
                 proTips: [
-                    "Tulis deskripsi pengalaman magang/PKL menggunakan kata kerja aktif di awal kalimat.",
-                    "Manfaatkan website gratis seperti Jobscan atau CVLighter untuk mengecek skor ke-ATS-an dokumenmu."
+                    "Masuk ke ruangan (atau ruang meeting online) tepat waktu, minimal 15 menit sebelum jadwal wawancara dimulai.",
+                    "Kenakan pakaian kerja formal yang bersih, rapi, dan sesuai dengan standar berpakaian profesional."
                 ],
                 avoidMistakes: [
-                    "Memasukkan banyak grafik batang, ikon lingkaran progres skill, atau foto potret diri yang memenuhi ruang karena elemen visual ini membuat parser ATS mengalami error.",
-                    "Menulis CV dalam bentuk gambar hasil screenshot JPG/PNG."
+                    "Menjelek-jelekkan tempat magang (PKL), sekolah, guru, atau teman sekelas Anda di hadapan pewawancara.",
+                    "Menjawab pertanyaan terlalu singkat hanya dengan kata 'Ya' atau 'Tidak' tanpa penjelasan yang memadai."
                 ]
             },
             {
                 id: 4,
+                title: "Skill yang Paling Dicari Perusahaan",
+                category: "Skill",
+                summary: "Kenali kemampuan yang saat ini paling dibutuhkan di dunia kerja agar kamu lebih siap bersaing.",
+                date: "28 April 2026",
+                steps: [
+                    {
+                        title: "Kuasai Keahlian Teknis (Hard Skill) Unggulan Jurusan Anda",
+                        desc: "Pastikan Anda memahami dengan matang konsep dasar dan praktek langsung dari kejuruan Anda di SMK (contoh: Gambar Autocad untuk Teknik, Coding/Database untuk IT, Entry Jurnal untuk Akuntansi)."
+                    },
+                    {
+                        title: "Asah Soft Skill Komunikasi dan Kerja Sama Tim",
+                        desc: "Kemampuan mendengar dengan baik, menyampaikan pendapat secara sopan, serta berkolaborasi menyelesaikan proyek bersama orang lain adalah skill yang sangat dijunjung tinggi oleh para perekrut."
+                    },
+                    {
+                        title: "Kembangkan Kemampuan Berpikir Kritis & Problem Solving",
+                        desc: "Dunia kerja penuh dengan tantangan tak terduga. Perusahaan mencari individu yang tidak hanya bisa menemukan masalah, tapi juga inisiatif menawarkan opsi solusi penyelesaian yang efektif."
+                    },
+                    {
+                        title: "Tingkatkan Literasi Digital dan Penguasaan Fitur Pendukung Kerja",
+                        desc: "Kuasai penggunaan dasar aplikasi perkantoran modern seperti Microsoft Office/Google Workspace (Docs, Sheets, Slides) serta platform kolaborasi tim seperti Trello, Slack, atau Zoom."
+                    }
+                ],
+                proTips: [
+                    "Ambil kursus online gratis dan bersertifikat di platform tepercaya untuk memvalidasi keahlian Anda.",
+                    "Mulailah belajar dasar-dasar bahasa asing (terutama Bahasa Inggris) untuk memperluas jangkauan peluang karir Anda."
+                ],
+                avoidMistakes: [
+                    "Hanya fokus pada peningkatan kemampuan akademis tanpa melatih etika berkomunikasi (attitude) sehari-hari.",
+                    "Merasa cepat puas dengan ilmu sekolah dan menolak mempelajari teknologi atau sistem kerja baru di luar kurikulum."
+                ]
+            },
+            {
+                id: 5,
                 title: "Pentingnya Attitude di Dunia Kerja: Profesional & Tangguh",
                 category: "Dunia Kerja",
                 summary: "Mengapa kemampuan adaptasi dan etika kesopanan dinilai lebih tinggi daripada sekadar keahlian teknis.",
@@ -526,7 +555,7 @@
                 ]
             },
             {
-                id: 5,
+                id: 6,
                 title: "Merintis Usaha Jasa IT di Era Digital Pasca Sekolah",
                 category: "Wirausaha",
                 summary: "Langkah mendasar membangun agensi pembuatan web atau servis komputer mandiri bagi lulusan SMK.",
@@ -537,7 +566,7 @@
                         desc: "Sebagai pemula, fokuslah pada 1 atau 2 keahlian spesifik yang paling Anda kuasai bersama tim sekolah Anda. Misalnya: Jasa Pembuatan Website Profil Sekolah/UMKM, Jasa Instalasi Jaringan Kantor Lokal, atau Jasa Service Laptop panggilan."
                     },
                     {
-                        title: "Bangun Portofolio Studi Kasus",
+                        title: "Bagun Portofolio Studi Kasus",
                         desc: "Sebelum mencari klien besar berbayar, tawarkan jasa Anda secara sukarela atau berbiaya murah kepada UMKM terdekat, keluarga, atau proyek sekolah. Dokumentasikan hasil kerja tersebut dalam bentuk portofolio digital (situs web atau PDF presentasi)."
                     },
                     {
@@ -564,7 +593,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         let articleId = parseInt(urlParams.get('id'));
 
-        // PENANGANAN PINTAR: Jika ID tidak ada atau bukan angka, gunakan ID: 1 sebagai default (Agar tidak kosong)
+        // Default ID: 1 (Kelebihan & Kekurangan) jika parameter kosong atau tidak sah, agar tidak kosong
         if (isNaN(articleId)) {
             articleId = 1;
         }
@@ -574,9 +603,8 @@
 
         // Render data ke halaman
         if (article) {
-            // Update Breadcrumb & Page Title
+            // Update Page Title
             document.title = `${article.title} - BKK SMKN 1 Garut`;
-            document.getElementById('breadcrumb-title').innerText = article.title;
             
             // Update Text Details
             document.getElementById('detail-category').innerText = article.category;
@@ -586,6 +614,8 @@
 
             // Render Dynamic Interactive Progress Bar (Step-by-Step Navigation)
             const progressContainer = document.getElementById('progress-indicator-container');
+            progressContainer.innerHTML = '<!-- Line Background --><div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-1 bg-slate-200 z-0"></div>';
+            
             article.steps.forEach((step, index) => {
                 const stepNum = index + 1;
                 
@@ -605,6 +635,8 @@
 
             // Render Content Step-by-Step
             const contentArea = document.getElementById('detail-rich-content');
+            contentArea.innerHTML = '';
+            
             article.steps.forEach((step, index) => {
                 const stepNum = index + 1;
                 
@@ -628,6 +660,7 @@
 
             // Render Pro Tips
             const proTipsArea = document.getElementById('detail-pro-tips');
+            proTipsArea.innerHTML = '';
             article.proTips.forEach(tip => {
                 const li = document.createElement('li');
                 li.innerText = tip;
@@ -635,7 +668,8 @@
             });
 
             // Render Avoid Mistakes
-            const avoidMistakesArea = document.getElementById('detail-avoid-mistakes');
+            const avoidMistakesArea = document.getElementById('detail-avoid-white');
+            avoidMistakesArea.innerHTML = '';
             article.avoidMistakes.forEach(mistake => {
                 const li = document.createElement('li');
                 li.innerText = mistake;
@@ -644,6 +678,7 @@
 
             // Render Recommendations (Sidebar)
             const recArea = document.getElementById('recommendations-container');
+            recArea.innerHTML = '';
             const recommendedArticles = tipsData.filter(item => item.id !== articleId).slice(0, 3);
             
             recommendedArticles.forEach(rec => {
@@ -662,13 +697,14 @@
             });
 
         } else {
-            // JIKA MEMANG ID SALAH (Misal ID 999): Tampilkan error container terstruktur dengan daftar alternatif aktif
+            // Jika ID salah, tampilkan pesan error yang ramah beserta pilihan artikel pengganti
             document.getElementById('article-container').classList.add('hidden');
             const errorContainer = document.getElementById('error-container');
             errorContainer.classList.remove('hidden');
 
             const quickLinksArea = document.getElementById('error-quick-links');
-            // Menampilkan pilihan panduan alternatif di dalam kotak kesalahan agar tidak terlihat kosong sama sekali
+            quickLinksArea.innerHTML = '';
+            
             tipsData.forEach(item => {
                 const link = document.createElement('a');
                 link.href = `detail.html?id=${item.id}`;
@@ -720,7 +756,7 @@
             }, 5000);
         }
 
-        // Fungsi Simulasi Berbagi ke Media Sosial
+        // Fungsi Bagikan ke Media Sosial
         function shareSocial(platform) {
             const url = encodeURIComponent(window.location.href);
             const title = encodeURIComponent(article ? article.title : "Panduan Karir Alumni SMKN 1 Garut");
