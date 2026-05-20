@@ -130,157 +130,144 @@
           </p>
         </div>
 
-       <!-- BUTTON FILTER -->
-<div class="flex gap-3 flex-wrap">
+        <!-- BUTTON FILTER -->
+        <div class="flex gap-3 flex-wrap">
 
-  <a
-    href="#semua"
-    class="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
-  >
-    Semua
-  </a>
+          <button onclick="filterTips('all', event)" class="filter-btn active-btn bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm">
+  Semua
+</button>
 
-  <a
-    href="#cv"
-    class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
-  >
-    CV
-  </a>
+<button onclick="filterTips('cv', event)" class="filter-btn bg-white border border-slate-200 px-5 py-2.5 rounded-xl font-bold text-sm">
+  CV
+</button>
 
-  <a
-    href="#interview"
-    class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
-  >
-    Interview
-  </a>
+<button onclick="filterTips('interview', event)" class="filter-btn bg-white border border-slate-200 px-5 py-2.5 rounded-xl font-bold text-sm">
+  Interview
+</button>
 
-  <a
-    href="#skill"
-    class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
-  >
-    Skill
-  </a>
+<button onclick="filterTips('skill', event)" class="filter-btn bg-white border border-slate-200 px-5 py-2.5 rounded-xl font-bold text-sm">
+  Skill
+</button>
+        </div>
+      </div>
 
-</div>
+      <!-- GRID -->
+      <div id="tips-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<!-- GRID -->
-<div id="semua" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- CARD 1 -->
+        <div
+          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
+          data-category="cv"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+            class="w-full h-52 object-cover"
+          />
 
-  <!-- CARD 1 -->
-  <div
-    id="cv"
-    class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
-  >
-    <img
-      src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-      class="w-full h-52 object-cover"
-    />
+          <div class="p-7">
 
-    <div class="p-7">
+            <span
+              class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              CV
+            </span>
 
-      <span
-        class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full"
-      >
-        CV
-      </span>
+            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+              Cara Membuat CV yang Menarik HRD
+            </h3>
 
-      <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
-        Cara Membuat CV yang Menarik HRD
-      </h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Pelajari cara membuat CV profesional yang bisa meningkatkan
+              peluang diterima kerja meskipun belum punya pengalaman.
+            </p>
 
-      <p class="text-slate-500 text-sm leading-relaxed mb-6">
-        Pelajari cara membuat CV profesional yang bisa meningkatkan
-        peluang diterima kerja meskipun belum punya pengalaman.
-      </p>
+            <a
+              href="tips-detail.html?id=2"
+              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+            >
+              Baca Selengkapnya
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
 
-      <a
-        href="tips-detail.html?type=cv"
-        class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
-      >
-        Baca Selengkapnya
-        <i class="fas fa-arrow-right ml-2"></i>
-      </a>
+          </div>
+        </div>
 
-    </div>
-  </div>
+        <!-- CARD 2 -->
+        <div
+          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
+          data-category="interview"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+            class="w-full h-52 object-cover"
+          />
 
-  <!-- CARD 2 -->
-  <div
-    id="interview"
-    class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
-  >
-    <img
-      src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-      class="w-full h-52 object-cover"
-    />
+          <div class="p-7">
 
-    <div class="p-7">
+            <span
+              class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              Interview
+            </span>
 
-      <span
-        class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full"
-      >
-        Interview
-      </span>
+            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+              Tips Lolos Interview Kerja Pertama
+            </h3>
 
-      <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
-        Tips Lolos Interview Kerja Pertama
-      </h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Persiapkan dirimu menghadapi HRD dengan memahami pertanyaan umum
+              dan cara menjawab yang percaya diri.
+            </p>
 
-      <p class="text-slate-500 text-sm leading-relaxed mb-6">
-        Persiapkan dirimu menghadapi HRD dengan memahami pertanyaan umum
-        dan cara menjawab yang percaya diri.
-      </p>
+            <a
+              href="tips-detail.html?type=interview"
+              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+            >
+              Baca Selengkapnya
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
 
-      <a
-        href="tips-detail.html?type=interview"
-        class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
-      >
-        Baca Selengkapnya
-        <i class="fas fa-arrow-right ml-2"></i>
-      </a>
+          </div>
+        </div>
 
-    </div>
-  </div>
+        <!-- CARD 3 -->
+        <div
+          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
+          data-category="skill"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+            class="w-full h-52 object-cover"
+          />
 
-  <!-- CARD 3 -->
-  <div
-    id="skill"
-    class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
-  >
-    <img
-      src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
-      class="w-full h-52 object-cover"
-    />
+          <div class="p-7">
 
-    <div class="p-7">
+            <span
+              class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              Skill
+            </span>
 
-      <span
-        class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full"
-      >
-        Skill
-      </span>
+            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+              Skill yang Paling Dicari Perusahaan
+            </h3>
 
-      <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
-        Skill yang Paling Dicari Perusahaan
-      </h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Kenali kemampuan yang saat ini paling dibutuhkan di dunia kerja
+              agar kamu lebih siap bersaing.
+            </p>
 
-      <p class="text-slate-500 text-sm leading-relaxed mb-6">
-        Kenali kemampuan yang saat ini paling dibutuhkan di dunia kerja
-        agar kamu lebih siap bersaing.
-      </p>
+            <a
+              href="tips-detail.html?type=skill"
+              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+            >
+              Baca Selengkapnya
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
 
-      <a
-        href="tips-detail.html?type=skill"
-        class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
-      >
-        Baca Selengkapnya
-        <i class="fas fa-arrow-right ml-2"></i>
-      </a>
+          </div>
+        </div>
 
-    </div>
-  </div>
-
-</div>
       </div>
     </section>
 
@@ -299,110 +286,138 @@
               </div>
               <h2 class="text-white font-bold text-xl">BKK SMKN 1</h2>
             </div>
+
             <p class="text-sm leading-relaxed opacity-80 mb-6">
               Pusat pengembangan karir dan penyaluran tenaga kerja profesional
               khusus alumni SMKN 1 Garut menuju Indonesia Emas.
             </p>
+
             <div class="flex space-x-4">
               <a
                 href="#"
                 class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-blue-600 transition"
-                ><i class="fab fa-instagram"></i
-              ></a>
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+
               <a
                 href="#"
                 class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-blue-600 transition"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
               <a
                 href="#"
                 class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-blue-600 transition"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
             </div>
           </div>
+
           <div>
             <h3 class="text-white font-bold mb-6 text-lg">Tautan Cepat</h3>
+
             <ul class="space-y-4 text-sm">
               <li>
                 <a
                   href="lowongan.html"
                   class="hover:text-blue-400 transition flex items-center"
-                  ><i class="fas fa-chevron-right text-[10px] mr-2"></i>
-                  Lowongan Kerja</a
                 >
+                  <i class="fas fa-chevron-right text-[10px] mr-2"></i>
+                  Lowongan Kerja
+                </a>
               </li>
+
               <li>
                 <a
                   href="acara.html"
                   class="hover:text-blue-400 transition flex items-center"
-                  ><i class="fas fa-chevron-right text-[10px] mr-2"></i> Jadwal
-                  Rekrutmen</a
                 >
+                  <i class="fas fa-chevron-right text-[10px] mr-2"></i>
+                  Jadwal Rekrutmen
+                </a>
               </li>
+
               <li>
                 <a
                   href="tutorial-pendaftaran.html"
                   class="hover:text-blue-400 transition flex items-center"
-                  ><i class="fas fa-chevron-right text-[10px] mr-2"></i>
-                  Tutorial Pendaftaran</a
                 >
+                  <i class="fas fa-chevron-right text-[10px] mr-2"></i>
+                  Tutorial Pendaftaran
+                </a>
               </li>
+
               <li>
                 <a
                   href="tips.html"
                   class="hover:text-blue-400 transition flex items-center"
-                  ><i class="fas fa-chevron-right text-[10px] mr-2"></i>
-                  Tips Karir</a
                 >
+                  <i class="fas fa-chevron-right text-[10px] mr-2"></i>
+                  Tips Karir
+                </a>
               </li>
+
               <li>
                 <a
                   href="tracer.html"
                   class="hover:text-blue-400 transition flex items-center"
-                  ><i class="fas fa-chevron-right text-[10px] mr-2"></i> Tracer
-                  Study</a
                 >
+                  <i class="fas fa-chevron-right text-[10px] mr-2"></i>
+                  Tracer Study
+                </a>
               </li>
             </ul>
           </div>
+
           <div>
             <h3 class="text-white font-bold mb-6 text-lg">Hubungi Kami</h3>
+
             <ul class="space-y-4 text-sm">
               <li class="flex items-start">
                 <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-500"></i>
-                <span
-                  >Jl. Cimanuk No. 309 A, Tarogong Kidul, Garut, Jawa Barat
-                  44151</span
-                >
+
+                <span>
+                  Jl. Cimanuk No. 309 A, Tarogong Kidul, Garut, Jawa Barat
+                  44151
+                </span>
               </li>
+
               <li class="flex items-center">
                 <i class="fas fa-phone mr-3 text-blue-500"></i>
                 <span>(0262) 233796</span>
               </li>
+
               <li class="flex items-center">
                 <i class="fas fa-envelope mr-3 text-blue-500"></i>
                 <span>bkk@smkn1garut.sch.id</span>
               </li>
             </ul>
           </div>
+
           <div>
             <h3 class="text-white font-bold mb-6 text-lg">Newsletter</h3>
+
             <p class="text-xs mb-4 opacity-70">
               Dapatkan info lowongan terbaru langsung di email Anda.
             </p>
+
             <div class="flex">
               <input
                 type="email"
                 placeholder="Email Anda"
                 class="bg-white/5 border border-white/10 px-4 py-2.5 rounded-l-lg w-full focus:outline-none focus:border-blue-500"
               />
+
               <button class="bg-blue-600 px-4 rounded-r-lg hover:bg-blue-700">
                 <i class="fas fa-paper-plane"></i>
               </button>
             </div>
           </div>
         </div>
+
         <div
           class="border-t border-white/10 pt-8 text-center text-xs opacity-50"
         >
@@ -411,3 +426,33 @@
         </div>
       </div>
     </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+     function filterTips(category, event) {
+  const cards = document.querySelectorAll(".tips-card");
+  const buttons = document.querySelectorAll(".filter-btn");
+
+  // reset semua tombol jadi transparan
+  buttons.forEach((btn) => {
+    btn.classList.remove("bg-blue-600", "text-white");
+    btn.classList.add("bg-white", "text-slate-900");
+  });
+
+  // aktifkan tombol yang diklik
+  event.currentTarget.classList.add("bg-blue-600", "text-white");
+  event.currentTarget.classList.remove("bg-white", "text-slate-900");
+
+  // filter card
+  cards.forEach((card) => {
+    if (category === "all" || card.dataset.category === category) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+    </script>
+
+  </body>
+</html>
