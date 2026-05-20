@@ -130,146 +130,157 @@
           </p>
         </div>
 
-        <div class="flex gap-3 flex-wrap">
+       <!-- BUTTON FILTER -->
+<div class="flex gap-3 flex-wrap">
 
-          <button
-            class="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
-          >
-            Semua
-          </button>
+  <a
+    href="#semua"
+    class="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
+  >
+    Semua
+  </a>
 
-          <button
-            class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
-          >
-            CV
-          </button>
+  <a
+    href="#cv"
+    class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
+  >
+    CV
+  </a>
 
-          <button
-            class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
-          >
-            Interview
-          </button>
+  <a
+    href="#interview"
+    class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
+  >
+    Interview
+  </a>
 
-          <button
-            class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
-          >
-            Skill
-          </button>
+  <a
+    href="#skill"
+    class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
+  >
+    Skill
+  </a>
 
-        </div>
-      </div>
+</div>
 
-      <!-- GRID -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- GRID -->
+<div id="semua" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- CARD 1 -->
-        <div
-          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-            class="w-full h-52 object-cover"
-          />
+  <!-- CARD 1 -->
+  <div
+    id="cv"
+    class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+      class="w-full h-52 object-cover"
+    />
 
-          <div class="p-7">
+    <div class="p-7">
 
-            <span
-              class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full"
-            >
-              CV
-            </span>
+      <span
+        class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full"
+      >
+        CV
+      </span>
 
-            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
-              Cara Membuat CV yang Menarik HRD
-            </h3>
+      <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+        Cara Membuat CV yang Menarik HRD
+      </h3>
 
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">
-              Pelajari cara membuat CV profesional yang bisa meningkatkan
-              peluang diterima kerja meskipun belum punya pengalaman.
-            </p>
+      <p class="text-slate-500 text-sm leading-relaxed mb-6">
+        Pelajari cara membuat CV profesional yang bisa meningkatkan
+        peluang diterima kerja meskipun belum punya pengalaman.
+      </p>
 
-            <a
-              href="tips-detail.html"
-              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
-            >
-              Baca Selengkapnya
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
+      <a
+        href="tips-detail.html?type=cv"
+        class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+      >
+        Baca Selengkapnya
+        <i class="fas fa-arrow-right ml-2"></i>
+      </a>
 
-        <!-- CARD 2 -->
-        <div
-          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-            class="w-full h-52 object-cover"
-          />
+    </div>
+  </div>
 
-          <div class="p-7">
+  <!-- CARD 2 -->
+  <div
+    id="interview"
+    class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+      class="w-full h-52 object-cover"
+    />
 
-            <span
-              class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full"
-            >
-              Interview
-            </span>
+    <div class="p-7">
 
-            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
-              Tips Lolos Interview Kerja Pertama
-            </h3>
+      <span
+        class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full"
+      >
+        Interview
+      </span>
 
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">
-              Persiapkan dirimu menghadapi HRD dengan memahami pertanyaan umum
-              dan cara menjawab yang percaya diri.
-            </p>
+      <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+        Tips Lolos Interview Kerja Pertama
+      </h3>
 
-            <a
-              href="tips-detail.html"
-              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
-            >
-              Baca Selengkapnya
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
+      <p class="text-slate-500 text-sm leading-relaxed mb-6">
+        Persiapkan dirimu menghadapi HRD dengan memahami pertanyaan umum
+        dan cara menjawab yang percaya diri.
+      </p>
 
-        <!-- CARD 3 -->
-        <div
-          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
-            class="w-full h-52 object-cover"
-          />
+      <a
+        href="tips-detail.html?type=interview"
+        class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+      >
+        Baca Selengkapnya
+        <i class="fas fa-arrow-right ml-2"></i>
+      </a>
 
-          <div class="p-7">
+    </div>
+  </div>
 
-            <span
-              class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full"
-            >
-              Skill
-            </span>
+  <!-- CARD 3 -->
+  <div
+    id="skill"
+    class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+      class="w-full h-52 object-cover"
+    />
 
-            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
-              Skill yang Paling Dicari Perusahaan
-            </h3>
+    <div class="p-7">
 
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">
-              Kenali kemampuan yang saat ini paling dibutuhkan di dunia kerja
-              agar kamu lebih siap bersaing.
-            </p>
+      <span
+        class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full"
+      >
+        Skill
+      </span>
 
-            <a
-              href="tips-detail.html"
-              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
-            >
-              Baca Selengkapnya
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
+      <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+        Skill yang Paling Dicari Perusahaan
+      </h3>
 
+      <p class="text-slate-500 text-sm leading-relaxed mb-6">
+        Kenali kemampuan yang saat ini paling dibutuhkan di dunia kerja
+        agar kamu lebih siap bersaing.
+      </p>
+
+      <a
+        href="tips-detail.html?type=skill"
+        class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+      >
+        Baca Selengkapnya
+        <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+
+    </div>
+  </div>
+
+</div>
       </div>
     </section>
 
