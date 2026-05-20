@@ -1,114 +1,327 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tips & Tricks Karir</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BKK SMKN 1 Garut - Tips Karir</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<body class="bg-gray-100">
-
-  <!-- Navbar -->
-  <nav class="bg-blue-900 text-white p-4">
-    <div class="flex justify-between items-center max-w-7xl mx-auto">
-      <h1 class="text-2xl font-bold">BKK SMKN 1 Garut</h1>
-
-      <div class="flex gap-6">
-        <a href="#">Beranda</a>
-        <a href="#">Lowongan</a>
-        <a href="tips.html" class="font-bold text-yellow-300">
-          Tips & Tricks
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-20 text-center">
-    <p class="bg-white/20 inline-block px-4 py-2 rounded-full mb-4">
-      Panduan Karir Alumni
-    </p>
-
-    <h1 class="text-5xl font-bold mb-4">
-      Tips & Tricks Dunia Kerja
-    </h1>
-
-    <p class="text-gray-200">
-      Temukan tips terbaik untuk persiapan karir dan dunia kerja.
-    </p>
-  </section>
-
-  <!-- Search -->
-  <div class="max-w-7xl mx-auto px-6 mt-10">
-    <input
-      type="text"
-      placeholder="Cari tips..."
-      class="w-full md:w-96 px-4 py-3 rounded-xl border"
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
     />
-  </div>
 
-  <!-- Card Tips -->
-  <section class="max-w-7xl mx-auto px-6 py-10">
-    <div class="grid md:grid-cols-3 gap-6">
+    <style>
+      .hero {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(0, 31, 63, 0.9),
+            rgba(30, 58, 138, 0.85)
+          ),
+          url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+      }
 
-      <!-- Card 1 -->
-      <div class="bg-white rounded-2xl shadow p-5">
-        <h2 class="text-2xl font-bold mb-3">
-          Tips Interview Kerja
-        </h2>
+      .tips-card:hover {
+        transform: translateY(-6px);
+      }
+    </style>
+  </head>
 
-        <p class="text-gray-600 mb-5">
-          Pelajari cara menjawab pertanyaan HRD dan meningkatkan rasa percaya diri saat interview.
+  <body class="bg-slate-50 text-slate-900">
+
+    <!-- NAVBAR -->
+    <nav class="bg-[#001f3f] text-white sticky top-0 z-50 shadow-lg">
+      <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+
+          <div class="flex items-center gap-3">
+            <div
+              class="w-11 h-11 bg-white rounded-xl flex items-center justify-center"
+            >
+              <i class="fas fa-graduation-cap text-[#001f3f] text-xl"></i>
+            </div>
+
+            <div>
+              <h1 class="font-bold text-xl">BKK SMKN 1</h1>
+              <p class="text-xs opacity-70 tracking-widest uppercase">
+                Garut
+              </p>
+            </div>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-8 font-semibold text-sm">
+            <a href="beranda.html" class="hover:text-blue-400 transition">
+              Beranda
+            </a>
+
+            <a href="lowongan.html" class="hover:text-blue-400 transition">
+              Lowongan
+            </a>
+
+            <a href="acara.html" class="hover:text-blue-400 transition">
+              Acara
+            </a>
+
+            <a href="berita.html" class="hover:text-blue-400 transition">
+              Berita
+            </a>
+
+            <a
+              href="tips.html"
+              class="text-blue-400"
+            >
+              Tips Karir
+            </a>
+
+            <a href="tracer.html" class="hover:text-blue-400 transition">
+              Tracer Study
+            </a>
+          </div>
+
+          <a
+            href="auth.html"
+            class="hidden lg:block bg-blue-600 hover:bg-blue-700 px-6 py-2.5 rounded-full font-bold text-sm transition"
+          >
+            Masuk
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero text-white py-28">
+      <div class="container mx-auto px-6 text-center">
+
+        <span
+          class="bg-white/20 px-5 py-2 rounded-full text-sm font-semibold"
+        >
+          Tips & Pengembangan Karir
+        </span>
+
+        <h1 class="text-5xl font-extrabold mt-6 leading-tight">
+          Persiapkan Masa Depan <br />
+          Karirmu Dari Sekarang
+        </h1>
+
+        <p class="max-w-2xl mx-auto mt-6 text-lg text-slate-200">
+          Dapatkan berbagai tips interview, pembuatan CV, pengembangan skill,
+          dan persiapan dunia kerja khusus untuk siswa & alumni SMKN 1 Garut.
         </p>
 
-        <a
-          href="tips-detail.html"
-          class="bg-blue-900 text-white px-4 py-2 rounded-xl inline-block"
-        >
-          Baca Selengkapnya
-        </a>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="container mx-auto px-6 py-20">
+
+      <div class="flex justify-between items-center mb-12 flex-wrap gap-4">
+
+        <div>
+          <h2 class="text-4xl font-extrabold text-[#001f3f]">
+            Artikel Tips Karir
+          </h2>
+
+          <p class="text-slate-500 mt-2">
+            Tingkatkan peluang kerja dengan memahami dunia profesional
+          </p>
+        </div>
+
+        <div class="flex gap-3 flex-wrap">
+
+          <button
+            class="bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm"
+          >
+            Semua
+          </button>
+
+          <button
+            class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
+          >
+            CV
+          </button>
+
+          <button
+            class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
+          >
+            Interview
+          </button>
+
+          <button
+            class="bg-white border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-xl font-bold text-sm transition"
+          >
+            Skill
+          </button>
+
+        </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="bg-white rounded-2xl shadow p-5">
-        <h2 class="text-2xl font-bold mb-3">
-          Cara Membuat CV
-        </h2>
+      <!-- GRID -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <p class="text-gray-600 mb-5">
-          Buat CV yang menarik, rapi, dan profesional agar mudah dilirik HRD.
-        </p>
-
-        <a
-          href="tips-detail.html"
-          class="bg-blue-900 text-white px-4 py-2 rounded-xl inline-block"
+        <!-- CARD 1 -->
+        <div
+          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
         >
-          Baca Selengkapnya
-        </a>
-      </div>
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+            class="w-full h-52 object-cover"
+          />
 
-      <!-- Card 3 -->
-      <div class="bg-white rounded-2xl shadow p-5">
-        <h2 class="text-2xl font-bold mb-3">
-          Persiapan Psikotes
-        </h2>
+          <div class="p-7">
 
-        <p class="text-gray-600 mb-5">
-          Latihan soal dan manajemen waktu untuk menghadapi psikotes kerja.
-        </p>
+            <span
+              class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              CV
+            </span>
 
-        <a
-          href="tips-detail.html"
-          class="bg-blue-900 text-white px-4 py-2 rounded-xl inline-block"
+            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+              Cara Membuat CV yang Menarik HRD
+            </h3>
+
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Pelajari cara membuat CV profesional yang bisa meningkatkan
+              peluang diterima kerja meskipun belum punya pengalaman.
+            </p>
+
+            <a
+              href="tips-detail.html"
+              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+            >
+              Baca Selengkapnya
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
         >
-          Baca Selengkapnya
-        </a>
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+            class="w-full h-52 object-cover"
+          />
+
+          <div class="p-7">
+
+            <span
+              class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              Interview
+            </span>
+
+            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+              Tips Lolos Interview Kerja Pertama
+            </h3>
+
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Persiapkan dirimu menghadapi HRD dengan memahami pertanyaan umum
+              dan cara menjawab yang percaya diri.
+            </p>
+
+            <a
+              href="#"
+              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+            >
+              Baca Selengkapnya
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="tips-card bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 transition duration-300"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+            class="w-full h-52 object-cover"
+          />
+
+          <div class="p-7">
+
+            <span
+              class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              Skill
+            </span>
+
+            <h3 class="text-2xl font-extrabold text-slate-800 mt-4 mb-3">
+              Skill yang Paling Dicari Perusahaan
+            </h3>
+
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+              Kenali kemampuan yang saat ini paling dibutuhkan di dunia kerja
+              agar kamu lebih siap bersaing.
+            </p>
+
+            <a
+              href="#"
+              class="inline-flex items-center text-blue-600 font-bold hover:text-blue-700"
+            >
+              Baca Selengkapnya
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer class="bg-[#001f3f] text-slate-300 pt-16 pb-10 mt-20">
 
-</body>
+      <div class="container mx-auto px-6">
+
+        <div class="text-center">
+
+          <h2 class="text-white text-2xl font-bold mb-4">
+            BKK SMKN 1 Garut
+          </h2>
+
+          <p class="max-w-xl mx-auto text-sm opacity-70 leading-relaxed">
+            Platform informasi lowongan kerja, pengembangan karir, dan tracer
+            study untuk siswa dan alumni SMKN 1 Garut.
+          </p>
+
+          <div class="flex justify-center gap-4 mt-8">
+
+            <a
+              href="#"
+              class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-blue-600 transition"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-blue-600 transition"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="#"
+              class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-blue-600 transition"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+          </div>
+
+          <div class="border-t border-white/10 mt-10 pt-6 text-xs opacity-50">
+            © 2024 BKK SMKN 1 Garut. All Rights Reserved.
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+
+  </body>
 </html>

@@ -3,81 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Detail Tips</title>
+  <title>Detail Tips Karir</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-slate-100">
 
   <!-- Navbar -->
-  <nav class="bg-blue-900 text-white p-4">
-    <div class="flex justify-between items-center max-w-7xl mx-auto">
+  <nav class="bg-[#001f3f] text-white p-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">BKK SMKN 1 Garut</h1>
-
-      <div class="flex gap-6">
-        <a href="tips.html">Tips & Tricks</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Detail -->
-  <section class="max-w-4xl mx-auto py-16 px-6">
-
-    <div class="bg-white rounded-2xl shadow p-8">
-
-      <p class="text-blue-900 font-semibold mb-3">
-        Interview
-      </p>
-
-      <h1 class="text-4xl font-bold mb-6">
-        Tips Interview Kerja
-      </h1>
-
-      <img
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-        class="rounded-2xl mb-8 w-full h-80 object-cover"
-      />
-
-      <p class="text-gray-700 leading-8 mb-6">
-        Interview kerja merupakan tahap penting dalam proses melamar pekerjaan.
-        Persiapkan dirimu dengan baik agar lebih percaya diri dan mampu memberikan kesan terbaik kepada HRD.
-      </p>
-
-      <h2 class="text-2xl font-bold mb-3">
-        1. Datang Tepat Waktu
-      </h2>
-
-      <p class="text-gray-700 leading-8 mb-6">
-        Usahakan datang 10-15 menit lebih awal agar terlihat disiplin dan profesional.
-      </p>
-
-      <h2 class="text-2xl font-bold mb-3">
-        2. Gunakan Pakaian Rapi
-      </h2>
-
-      <p class="text-gray-700 leading-8 mb-6">
-        Gunakan pakaian formal dan sopan agar memberikan kesan baik kepada perusahaan.
-      </p>
-
-      <h2 class="text-2xl font-bold mb-3">
-        3. Pelajari Profil Perusahaan
-      </h2>
-
-      <p class="text-gray-700 leading-8 mb-6">
-        Cari tahu tentang perusahaan sebelum interview agar kamu lebih siap menjawab pertanyaan HRD.
-      </p>
 
       <a
         href="tips.html"
-        class="bg-blue-900 text-white px-5 py-3 rounded-xl inline-block mt-4"
+        class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-xl"
       >
         Kembali
       </a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <section class="max-w-4xl mx-auto py-16 px-6">
+
+    <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+
+      <img
+        id="detailImage"
+        src=""
+        class="w-full h-80 object-cover"
+      />
+
+      <div class="p-8">
+
+        <span
+          id="detailCategory"
+          class="bg-blue-100 text-blue-700 text-xs font-bold px-4 py-2 rounded-full"
+        >
+        </span>
+
+        <h1
+          id="detailTitle"
+          class="text-4xl font-extrabold text-slate-800 mt-5 mb-6"
+        >
+        </h1>
+
+        <div
+          id="detailContent"
+          class="text-slate-600 leading-8 text-lg space-y-5"
+        >
+        </div>
+
+      </div>
 
     </div>
 
   </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+
+    const title = document.getElementById("detailTitle");
+    const category = document.getElementById("detailCategory");
+    const content = document.getElementById("detailContent");
+    const image = document.getElementById("detailImage");
+
+    if (type === "cv") {
+      category.innerText = "CV";
+      title.innerText = "Cara Membuat CV yang Menarik HRD";
+
+      image.src =
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80";
+
+      content.innerHTML = `
+        <p>
+          CV adalah dokumen penting yang digunakan untuk memperkenalkan diri kepada perusahaan.
+        </p>
+
+        <p>
+          Gunakan desain yang rapi, jelas, dan profesional agar HRD tertarik membaca CV kamu.
+        </p>
+
+        <p>
+          Cantumkan data diri, pendidikan, pengalaman organisasi, skill, dan kontak aktif.
+        </p>
+
+        <p>
+          Hindari penggunaan warna berlebihan dan typo agar CV terlihat lebih meyakinkan.
+        </p>
+      `;
+    }
+
+    else if (type === "interview") {
+      category.innerText = "Interview";
+      title.innerText = "Tips Lolos Interview Kerja Pertama";
+
+      image.src =
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80";
+
+      content.innerHTML = `
+        <p>
+          Interview kerja merupakan tahap penting sebelum diterima perusahaan.
+        </p>
+
+        <p>
+          Persiapkan jawaban untuk pertanyaan umum seperti perkenalan diri dan alasan melamar pekerjaan.
+        </p>
+
+        <p>
+          Gunakan pakaian rapi dan datang tepat waktu agar memberikan kesan profesional.
+        </p>
+
+        <p>
+          Jawab pertanyaan dengan percaya diri dan tetap sopan selama interview berlangsung.
+        </p>
+      `;
+    }
+
+    else if (type === "skill") {
+      category.innerText = "Skill";
+      title.innerText = "Skill yang Paling Dicari Perusahaan";
+
+      image.src =
+        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80";
+
+      content.innerHTML = `
+        <p>
+          Dunia kerja saat ini membutuhkan berbagai skill baik hard skill maupun soft skill.
+        </p>
+
+        <p>
+          Kemampuan komunikasi, kerja sama tim, dan problem solving sangat penting dimiliki.
+        </p>
+
+        <p>
+          Selain itu, kemampuan teknologi dan digital juga semakin dibutuhkan perusahaan.
+        </p>
+
+        <p>
+          Terus belajar dan mengembangkan diri agar lebih siap menghadapi dunia kerja modern.
+        </p>
+      `;
+    }
+  </script>
 
 </body>
 </html>
