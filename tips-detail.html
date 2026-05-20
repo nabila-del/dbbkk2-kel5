@@ -1,83 +1,747 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Detail Tips</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Panduan Karir - BKK SMKN 1 Garut</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar untuk estetika */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        /* Style tambahan untuk konten dinamis */
+        .article-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
-<body class="bg-gray-100">
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-[#002347] text-white sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand -->
+                <div onclick="window.location.href='tips.html'" class="flex items-center space-x-3 cursor-pointer">
+                    <div class="bg-white p-2.5 rounded-lg shadow-inner">
+                        <!-- Topi Toga SVG -->
+                        <svg class="h-8 w-8 text-[#002347]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                            <path d="M4.14 12.18L12 16.47l7.86-4.29c.14-.08.14-.29 0-.36L12 7.53 4.14 11.82c-.14.07-.14.28 0 .36z"/>
+                        </svg>
+                    </div>
+                    <span class="font-bold text-lg tracking-wider hidden md:block">BKK SMKN 1 GARUT</span>
+                </div>
 
-  <!-- Navbar -->
-  <nav class="bg-blue-900 text-white p-4">
-    <div class="flex justify-between items-center max-w-7xl mx-auto">
-      <h1 class="text-2xl font-bold">BKK SMKN 1 Garut</h1>
+                <!-- Navigation Menu -->
+                <nav class="hidden lg:flex space-x-8 text-sm font-medium">
+                    <a href="tips.html" class="hover:text-blue-300 transition duration-150">Beranda</a>
+                    <a href="#" class="hover:text-blue-300 transition duration-150">Lowongan</a>
+                    <a href="#" class="hover:text-blue-300 transition duration-150">Berita</a>
+                    <a href="tips.html" class="text-blue-400 border-b-2 border-blue-400 pb-1 font-semibold">Tips Karir</a>
+                    <a href="#" class="hover:text-blue-300 transition duration-150">Acara</a>
+                    <a href="#" class="hover:text-blue-300 transition duration-150">Tracer Study</a>
+                </nav>
 
-      <div class="flex gap-6">
-        <a href="tips.html">Tips & Tricks</a>
-      </div>
-    </div>
-  </nav>
+                <!-- Button Masuk & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-4">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-full text-sm transition-all duration-200 transform hover:scale-105 shadow-md">
+                        Masuk
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-blue-300 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#001c3a] border-t border-slate-700 px-4 py-4 space-y-3">
+            <a href="tips.html" class="block text-slate-300 hover:text-white font-medium py-1">Beranda</a>
+            <a href="#" class="block text-slate-300 hover:text-white font-medium py-1">Lowongan</a>
+            <a href="#" class="block text-slate-300 hover:text-white font-medium py-1">Berita</a>
+            <a href="tips.html" class="block text-blue-400 font-semibold py-1">Tips Karir</a>
+            <a href="#" class="block text-slate-300 hover:text-white font-medium py-1">Acara</a>
+            <a href="#" class="block text-slate-300 hover:text-white font-medium py-1">Tracer Study</a>
+        </div>
+    </header>
 
-  <!-- Detail -->
-  <section class="max-w-4xl mx-auto py-16 px-6">
-
-    <div class="bg-white rounded-2xl shadow p-8">
-
-      <p class="text-blue-900 font-semibold mb-3">
-        Interview
-      </p>
-
-      <h1 class="text-4xl font-bold mb-6">
-        Tips Interview Kerja
-      </h1>
-
-      <img
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-        class="rounded-2xl mb-8 w-full h-80 object-cover"
-      />
-
-      <p class="text-gray-700 leading-8 mb-6">
-        Interview kerja merupakan tahap penting dalam proses melamar pekerjaan.
-        Persiapkan dirimu dengan baik agar lebih percaya diri dan mampu memberikan kesan terbaik kepada HRD.
-      </p>
-
-      <h2 class="text-2xl font-bold mb-3">
-        1. Datang Tepat Waktu
-      </h2>
-
-      <p class="text-gray-700 leading-8 mb-6">
-        Usahakan datang 10-15 menit lebih awal agar terlihat disiplin dan profesional.
-      </p>
-
-      <h2 class="text-2xl font-bold mb-3">
-        2. Gunakan Pakaian Rapi
-      </h2>
-
-      <p class="text-gray-700 leading-8 mb-6">
-        Gunakan pakaian formal dan sopan agar memberikan kesan baik kepada perusahaan.
-      </p>
-
-      <h2 class="text-2xl font-bold mb-3">
-        3. Pelajari Profil Perusahaan
-      </h2>
-
-      <p class="text-gray-700 leading-8 mb-6">
-        Cari tahu tentang perusahaan sebelum interview agar kamu lebih siap menjawab pertanyaan HRD.
-      </p>
-
-      <a
-        href="tips.html"
-        class="bg-blue-900 text-white px-5 py-3 rounded-xl inline-block mt-4"
-      >
-        Kembali
-      </a>
-
+    <!-- BREADCRUMB & BACK BUTTON -->
+    <div class="bg-slate-100 border-b border-slate-200 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center space-x-2 text-xs md:text-sm text-slate-500">
+                <a href="tips.html" class="hover:text-blue-600 transition">BKK SMKN 1 Garut</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <a href="tips.html" class="hover:text-blue-600 transition">Tips Karir</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <span class="text-slate-800 font-medium truncate max-w-[200px] md:max-w-xs" id="breadcrumb-title">Detail Panduan</span>
+            </div>
+            <a href="tips.html" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Kembali ke Daftar Tips
+            </a>
+        </div>
     </div>
 
-  </section>
+    <!-- MAIN DETAIL CONTENT -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- ERROR STATE (Jika ID tidak valid) -->
+        <div id="error-container" class="hidden bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 text-center my-10 max-w-2xl mx-auto space-y-6 animate-fade-in">
+            <div class="text-amber-500">
+                <i class="fa-solid fa-compass-drafting text-6xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-800">Ups! Panduan Tidak Ditemukan</h2>
+            <p class="text-slate-500 max-w-md mx-auto">Kami tidak dapat menemukan panduan dengan ID tersebut. Jangan khawatir, silakan pilih salah satu panduan favorit siswa di bawah ini:</p>
+            
+            <!-- Quick Links inside Error Box -->
+            <div class="grid grid-cols-1 gap-3 text-left max-w-md mx-auto" id="error-quick-links">
+                <!-- Diisi via JS -->
+            </div>
 
+            <div class="pt-4">
+                <a href="tips.html" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition shadow-md">
+                    <i class="fa-solid fa-house mr-2"></i> Kembali ke Beranda Tips
+                </a>
+            </div>
+        </div>
+
+        <!-- ARTICLE CONTAINER -->
+        <div id="article-container" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Column: Article Content -->
+            <article class="lg:col-span-8 bg-white rounded-2xl border border-slate-100 shadow-sm p-6 md:p-8 space-y-6">
+                
+                <!-- Category, Date & Tools -->
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-5">
+                    <div class="flex items-center space-x-3">
+                        <span id="detail-category" class="px-3.5 py-1 bg-blue-50 text-blue-600 text-xs font-bold uppercase rounded-full tracking-wider">
+                            Kategori
+                        </span>
+                        <span class="text-xs text-slate-400 flex items-center">
+                            <i class="fa-solid fa-calendar-days mr-1.5 text-blue-500"></i>
+                            <span id="detail-date">Tanggal</span>
+                        </span>
+                    </div>
+                    
+                    <!-- Font Resize & Share Controls -->
+                    <div class="flex items-center space-x-2">
+                        <!-- Font Sizer -->
+                        <button onclick="changeFontSize('dec')" title="Perkecil Teks" class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition text-sm font-semibold">
+                            A-
+                        </button>
+                        <button onclick="changeFontSize('inc')" title="Perbesar Teks" class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition text-base font-semibold">
+                            A+
+                        </button>
+                        <div class="w-px h-5 bg-slate-200 mx-1"></div>
+                        <!-- Share Button -->
+                        <button onclick="copyToClipboard()" class="bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-600 text-xs font-semibold px-3 py-2 rounded-lg transition flex items-center space-x-1.5">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>Bagikan</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Title & Summary -->
+                <div class="space-y-4">
+                    <h1 id="detail-title" class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Judul Artikel Panduan Karir
+                    </h1>
+                    <p id="detail-summary" class="text-base md:text-lg text-slate-500 font-light italic border-l-4 border-blue-500 pl-4 py-1 leading-relaxed">
+                        Ringkasan singkat mengenai panduan dan betapa pentingnya hal ini untuk menunjang transisi lulusan SMK ke industri dunia kerja.
+                    </p>
+                </div>
+
+                <!-- Custom Notification / Toast for Share -->
+                <div id="share-toast" class="hidden items-center p-4 mb-4 text-emerald-800 bg-emerald-50 rounded-xl border border-emerald-200 transition-all duration-300">
+                    <i class="fa-solid fa-circle-check text-lg mr-2 text-emerald-600"></i>
+                    <span class="text-sm font-medium">Tautan berhasil disalin! Bagikan ke teman satu perjuangan lulusan SMK-mu.</span>
+                </div>
+
+                <!-- STEP-BY-STEP PROGRESS BAR (INTERACTIVE VISUAL) -->
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                    <h3 class="text-sm font-bold text-slate-700 mb-4 uppercase tracking-wider flex items-center">
+                        <i class="fa-solid fa-list-check mr-2 text-blue-600"></i> Navigasi Langkah Panduan
+                    </h3>
+                    <!-- Progress Line -->
+                    <div class="relative flex items-center justify-between px-4 py-2" id="progress-indicator-container">
+                        <!-- Line Background -->
+                        <div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-1 bg-slate-200 z-0"></div>
+                        <!-- Steps will be generated here dynamically -->
+                    </div>
+                </div>
+
+                <!-- MAIN ARTICLE CONTENT (DYNAMICALLY FILLED) -->
+                <div id="detail-rich-content" class="article-content text-slate-700 text-base md:text-lg leading-relaxed space-y-8">
+                    <!-- Konten Step-by-Step Utama akan disuntikkan di sini -->
+                </div>
+
+                <!-- PRO TIPS & TRICKS SECTION -->
+                <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 md:p-8 space-y-4">
+                    <div class="flex items-center space-x-3 text-blue-800">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg">
+                            <i class="fa-solid fa-lightbulb text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Tips Profesional Tambahan</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm md:text-base text-slate-700 pl-4 list-disc" id="detail-pro-tips">
+                        <!-- Tips pro dinamis -->
+                    </ul>
+                </div>
+
+                <!-- COMMON MISTAKES TO AVOID -->
+                <div class="bg-rose-50 border border-rose-100 rounded-2xl p-6 md:p-8 space-y-4">
+                    <div class="flex items-center space-x-3 text-rose-800">
+                        <div class="bg-rose-600 text-white p-2 rounded-lg">
+                            <i class="fa-solid fa-triangle-exclamation text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold">Kesalahan Umum yang Harus Dihindari</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm md:text-base text-slate-700 pl-4 list-disc" id="detail-avoid-mistakes">
+                        <!-- Kesalahan umum dinamis -->
+                    </ul>
+                </div>
+
+                <!-- FEEDBACK INTERAKTIF -->
+                <div class="border-t border-slate-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span class="text-sm text-slate-500 font-medium">Apakah panduan ini membantumu?</span>
+                    <div class="flex items-center space-x-2" id="feedback-buttons">
+                        <button onclick="handleFeedback('yes')" class="flex items-center space-x-2 px-4 py-2 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200 border border-transparent rounded-xl text-sm font-semibold text-slate-600 transition">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <span>Ya, Membantu</span>
+                        </button>
+                        <button onclick="handleFeedback('no')" class="flex items-center space-x-2 px-4 py-2 bg-slate-100 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 border border-transparent rounded-xl text-sm font-semibold text-slate-600 transition">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <span>Biasa Saja</span>
+                        </button>
+                    </div>
+                    <div id="feedback-thanks" class="hidden text-sm font-semibold text-emerald-600">
+                        <i class="fa-solid fa-circle-check mr-1.5"></i> Terima kasih atas masukan positifmu! Sukses terus untuk karirmu!
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="lg:col-span-4 space-y-8">
+                
+                <!-- BKK BANNER / CALL TO ACTION -->
+                <div class="bg-gradient-to-br from-[#002347] to-[#0b3c6f] text-white rounded-2xl p-6 shadow-md border border-[#0b3c6f] space-y-4 text-center">
+                    <div class="w-16 h-16 bg-white/10 text-blue-300 rounded-2xl flex items-center justify-center mx-auto text-3xl">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">Siap Memulai Karir?</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Daftarkan dirimu ke sistem Tracer Study atau jelajahi puluhan lowongan kerja terbaru yang bekerja sama dengan SMKN 1 Garut.
+                    </p>
+                    <div class="pt-2 flex flex-col gap-2">
+                        <a href="#" class="block w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold tracking-wide transition shadow-sm">
+                            Lihat Lowongan Kerja
+                        </a>
+                        <a href="#" class="block w-full py-2.5 bg-white/15 hover:bg-white/20 text-white rounded-xl text-xs font-semibold transition">
+                            Tracer Study Alumni
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RECOMMENDATIONS SECTION -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
+                    <h3 class="text-base font-bold text-slate-950 border-b border-slate-100 pb-3 flex items-center">
+                        <i class="fa-solid fa-bookmark mr-2 text-blue-600"></i> Panduan Rekomendasi
+                    </h3>
+                    <div class="space-y-4" id="recommendations-container">
+                        <!-- Rekomendasi dimasukkan secara dinamis via JS -->
+                    </div>
+                </div>
+
+                <!-- SHARE CARD -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 text-center space-y-4">
+                    <h4 class="text-sm font-bold text-slate-800">Bagikan Panduan Ini</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Ajak alumni SMKN 1 Garut lainnya untuk sukses bersama di dunia industri.</p>
+                    <div class="flex items-center justify-center space-x-3">
+                        <a href="#" onclick="shareSocial('wa')" class="w-10 h-10 rounded-full bg-emerald-100 hover:bg-emerald-200 text-emerald-600 flex items-center justify-center transition" title="Bagikan ke WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="#" onclick="shareSocial('fb')" class="w-10 h-10 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-600 flex items-center justify-center transition" title="Bagikan ke Facebook">
+                            <i class="fa-brands fa-facebook-f text-base"></i>
+                        </a>
+                        <a href="#" onclick="shareSocial('tw')" class="w-10 h-10 rounded-full bg-sky-100 hover:bg-sky-200 text-sky-600 flex items-center justify-center transition" title="Bagikan ke Twitter / X">
+                            <i class="fa-brands fa-x-twitter text-base"></i>
+                        </a>
+                        <button onclick="copyToClipboard()" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition" title="Salin Tautan">
+                            <i class="fa-solid fa-link text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#001730] text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="bg-blue-600 p-2 rounded-lg">
+                            <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                            </svg>
+                        </div>
+                        <span class="font-bold text-lg">SMKN 1 Garut</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Menghubungkan Talenta Alumni SMKN 1 Garut dengan Peluang Karir Masa Depan di Industri Global.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-blue-600 text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-blue-600 text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-blue-600 text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tautan Cepat -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 tracking-wide">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-400 flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-slate-500"></i> Lowongan Kerja</a></li>
+                        <li><a href="#" class="hover:text-blue-400 flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-slate-500"></i> Jadwal Rekrutmen</a></li>
+                        <li><a href="#" class="hover:text-blue-400 flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-slate-500"></i> Tutorial Pendaftaran</a></li>
+                        <li><a href="tips.html" class="hover:text-blue-400 flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-slate-500"></i> Tips Karir</a></li>
+                        <li><a href="#" class="hover:text-blue-400 flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-slate-500"></i> Tracer Study</a></li>
+                    </ul>
+                </div>
+
+                <!-- Hubungi Kami -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 tracking-wide">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-blue-500"></i>
+                            <span>Jl. Cimanuk No. 309 A, Tarogong Kidul, Garut, Jawa Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3 text-blue-500"></i>
+                            <span>(0262) 233796</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3 text-blue-500"></i>
+                            <span>bkk@smkn1garut.sch.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 tracking-wide">Newsletter</h4>
+                    <p class="text-sm text-slate-400 mb-4">
+                        Dapatkan info lowongan terbaru langsung di email Anda.
+                    </p>
+                    <div class="relative flex">
+                        <input 
+                            type="email" 
+                            placeholder="Email Anda" 
+                            class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-l-lg text-sm text-white focus:outline-none focus:border-blue-500"
+                        >
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 rounded-r-lg flex items-center transition-colors">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-slate-800 pt-8 mt-8 text-center text-xs text-slate-500">
+                <p>&copy; 2026 Sistem Informasi BKK SMKN 1 Garut. Seluruh Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Data Artikel Karir Lengkap dengan Langkah-Langkah (Step-by-Step) detail
+        const tipsData = [
+            {
+                id: 1,
+                title: "Cara Menjawab Pertanyaan Kelebihan & Kekurangan Saat Interview",
+                category: "Interview",
+                summary: "Pelajari trik psikologi menjawab kelemahan tanpa merusak prospek kerjamu di hadapan HRD perusahaan.",
+                date: "12 Mei 2026",
+                steps: [
+                    {
+                        title: "Pahami Maksud Tersembunyi HRD",
+                        desc: "HRD bertanya tentang kelebihan dan kekurangan bukan untuk mencari orang yang sempurna, melainkan untuk menguji tingkat kesadaran diri (self-awareness), kejujuran, dan bagaimana kamu menyikapi kekurangan diri secara profesional."
+                    },
+                    {
+                        title: "Gunakan Formula STAR untuk Kelebihan",
+                        desc: "Saat memaparkan kelebihan, jangan sekadar menyebutkan kata sifat (misal: pekerja keras). Gunakan metode STAR (Situation, Task, Action, Result). Contoh: 'Saya mahir dalam manajemen waktu (Kelebihan). Saat di sekolah, saya memimpin proyek akhir kelas (Situation/Task) dengan membagi tugas menggunakan Trello (Action), sehingga proyek selesai 3 hari lebih cepat (Result).'"
+                    },
+                    {
+                        title: "Pilih Kekurangan yang 'Aman' & Beri Solusi",
+                        desc: "Pilih kekurangan asli yang tidak berhubungan langsung dengan kompetensi utama posisi yang kamu lamar, lalu sambung langsung dengan langkah konkret yang sedang kamu lakukan untuk mengatasinya. Contoh: 'Saya terkadang pelupa jika menangani banyak tugas sekaligus (Kelemahan). Oleh karena itu, saya selalu membiasakan diri menulis daftar to-do list harian di Google Keep dan mengatur alarm pengingat (Solusi).'"
+                    },
+                    {
+                        title: "Hindari Jawaban Klise",
+                        desc: "Jangan pernah menjawab 'Saya tidak punya kekurangan' (terdengar sombong) atau 'Kekurangan saya adalah terlalu perfeksionis / terlalu bekerja keras' (terdengar tidak jujur dan klise). HRD sudah sangat sering mendengar jawaban ini."
+                    }
+                ],
+                proTips: [
+                    "Latihlah intonasi bicaramu di depan cermin agar terdengar natural dan percaya diri.",
+                    "Sesuaikan kelebihan yang kamu sebutkan dengan kualifikasi pekerjaan yang tertulis di poster lowongan kerja."
+                ],
+                avoidMistakes: [
+                    "Menyebutkan kelemahan fatal yang merusak integritas kerja (misalnya: tidak suka bekerja sama, sering datang terlambat).",
+                    "Terlihat bingung terlalu lama saat ditanya mengenai kekurangan diri sendiri."
+                ]
+            },
+            {
+                id: 2,
+                title: "Panduan Menaklukkan Psikotes Wartegg & Gambar Pohon",
+                category: "Psikotes",
+                summary: "Tips analisis gambar untuk menunjukkan potensi kreativitas dan kestabilan emosi Anda.",
+                date: "05 Mei 2026",
+                steps: [
+                    {
+                        title: "Kuasai Esensi 8 Kotak Wartegg",
+                        desc: "Setiap kotak memiliki stimulus coretan yang mewakili aspek psikologi berbeda. Contoh: Kotak 1 (titik pusat) mewakili adaptasi diri; Kotak 2 (garis melengkung) mewakili sensibilitas/kehidupan sosial; Kotak 3 (3 garis tegak naik) mewakili motivasi prestasi. Gambarlah objek hidup/dinamis pada stimulus lengkung, dan objek mati/geometris pada stimulus garis kaku."
+                    },
+                    {
+                        title: "Atur Urutan Menggambar Secara Fleksibel",
+                        desc: "Jangan menggambar terlalu berurutan dari nomor 1 sampai 8 karena Anda dinilai terlalu kaku (rigid). Sebaliknya, jangan juga terlalu acak-acakan karena Anda akan dinilai tidak konsisten atau kurang teratur. Gunakan kombinasi urutan menengah (misal: 1, 2, 3, 4, 8, 7, 6, 5)."
+                    },
+                    {
+                        title: "Menggambar Pohon yang Proporsional (Tree Test)",
+                        desc: "Saat diminta menggambar pohon, gambarlah pohon berkambium (dikotil) yang berkayu, bercabang, dan memiliki buah atau daun yang jelas (misalnya: pohon mangga, nangka, atau jati). Pastikan ada akar yang menancap kuat di tanah (stabilitas emosi), batang yang proporsional (kekuatan ego), dan tajuk daun yang rindang (interaksi sosial)."
+                    },
+                    {
+                        title: "Perhatikan Ketebalan Garis dan Kebersihan",
+                        desc: "Garis yang digambar terlalu tipis menunjukkan keraguan dan kurang percaya diri, sedangkan garis yang ditekan terlalu tebal hingga kertas hampir robek menandakan kecenderungan impulsif atau ketegangan emosional. Jaga kertas psikotes tetap bersih tanpa banyak coretan bekas penghapus."
+                    }
+                ],
+                proTips: [
+                    "Bawa pensil tipe HB dan 2B yang berkualitas baik dan tajam ke ruang ujian.",
+                    "Latihlah sketsa dasar pohon dan manusia beberapa hari sebelum jadwal psikotes dilaksanakan."
+                ],
+                avoidMistakes: [
+                    "Menggambar pohon kelapa, pisang, bambu, atau semak belukar karena bukan merupakan klasifikasi pohon berkambium tinggi dalam alat ukur psikotes.",
+                    "Menggambar objek wartegg berbau kekerasan (seperti senjata tajam atau kecelakaan)."
+                ]
+            },
+            {
+                id: 3,
+                title: "Strategi ATS-Friendly CV untuk Lulusan SMK Baru",
+                category: "CV & Portofolio",
+                summary: "Buat CV kamu terbaca oleh sistem robot filter perusahaan besar agar berkesempatan diwawancarai.",
+                date: "28 April 2026",
+                steps: [
+                    {
+                        title: "Gunakan Layout Satu Kolom yang Bersih",
+                        desc: "Sistem ATS (Applicant Tracking System) membaca teks dari kiri ke kanan dan atas ke bawah. Layout dua kolom atau kolom yang rumit berisiko membuat sistem salah membaca urutan pengalaman kerja atau pendidikan Anda."
+                    },
+                    {
+                        title: "Pilih Font Standar yang Mudah Terbaca",
+                        desc: "Hindari penggunaan font dekoratif atau script yang estetik tapi tidak ramah mesin. Gunakan font universal seperti Arial, Helvetica, Calibri, atau Georgia dengan ukuran berkisar 10 - 12 pt untuk teks utama."
+                    },
+                    {
+                        title: "Gunakan Kata Kunci (Keywords) dari Deskripsi Pekerjaan",
+                        desc: "Mesin ATS menyaring CV berdasarkan persentase kecocokan kata kunci dalam CV dengan kualifikasi lowongan. Masukkan terminologi teknis jurusan SMK-mu yang dicari industri (misal: 'Pemeliharaan Jaringan', 'Troubleshooting', 'Laravel', 'Akuntansi Jasa')."
+                    },
+                    {
+                        title: "Simpan dalam Format PDF yang Tepat",
+                        desc: "Simpan dokumen Anda dengan format penamaan profesional yang jelas, contoh: `CV_NamaLengkap_PosisiMelamar.pdf`. Pastikan teks di dalam PDF bisa diblok dan disalin (bukan PDF hasil scan gambar)."
+                    }
+                ],
+                proTips: [
+                    "Tulis deskripsi pengalaman magang/PKL menggunakan kata kerja aktif di awal kalimat.",
+                    "Manfaatkan website gratis seperti Jobscan atau CVLighter untuk mengecek skor ke-ATS-an dokumenmu."
+                ],
+                avoidMistakes: [
+                    "Memasukkan banyak grafik batang, ikon lingkaran progres skill, atau foto potret diri yang memenuhi ruang karena elemen visual ini membuat parser ATS mengalami error.",
+                    "Menulis CV dalam bentuk gambar hasil screenshot JPG/PNG."
+                ]
+            },
+            {
+                id: 4,
+                title: "Pentingnya Attitude di Dunia Kerja: Profesional & Tangguh",
+                category: "Dunia Kerja",
+                summary: "Mengapa kemampuan adaptasi dan etika kesopanan dinilai lebih tinggi daripada sekadar keahlian teknis.",
+                date: "20 April 2026",
+                steps: [
+                    {
+                        title: "Pahami Konsep Etos Kerja 3S",
+                        desc: "Senyum, Sapa, dan Salam bukan hanya etika sekolah. Di tempat kerja, tunjukkan kehangatan profesional dengan selalu menyapa rekan kerja, atasan, maupun staf pendukung kerja. Ini membangun atmosfer lingkungan kerja yang suportif."
+                    },
+                    {
+                        title: "Komunikasi Proaktif dan Konstruktif",
+                        desc: "Bila mengalami kendala pekerjaan, segera koordinasikan dengan atasan Anda atau mentor kerja, bukan malah menghindar atau diam saja. Berbicaralah dengan bahasa yang sopan dan selalu sampaikan usulan solusi cadangan."
+                    },
+                    {
+                        title: "Menerima Kritik sebagai Bahan Evaluasi",
+                        desc: "Sebagai lulusan SMK baru, wajar jika masih banyak hal praktis lapangan yang harus dipelajari. Jauhkan ego pribadi saat mendapat teguran atau saran dari senior. Tunjukkan sikap mau belajar dan berterima kasihlah atas evaluasinya."
+                    },
+                    {
+                        title: "Tepati Waktu & Kelola Tanggung Jawab",
+                        desc: "Integritas nomor satu ditentukan oleh kedisiplinan waktu kehadiran kerja serta ketepatan dalam menyelesaikan tugas (deadline). Jika ada indikasi keterlambatan, berikan info pendahuluan yang jelas dan logis."
+                    }
+                ],
+                proTips: [
+                    "Gunakan busana yang rapi dan sesuai dengan budaya kantor tempat Anda bekerja.",
+                    "Jangan pernah membicarakan kejelekan perusahaan lama atau rekan kerja di media sosial pribadi."
+                ],
+                avoidMistakes: [
+                    "Sikap antipati, merasa paling pintar sendiri di depan para pegawai senior.",
+                    "Sering membolos atau ijin mendadak tanpa alasan darurat medis yang dapat dipertanggungjawabkan."
+                ]
+            },
+            {
+                id: 5,
+                title: "Merintis Usaha Jasa IT di Era Digital Pasca Sekolah",
+                category: "Wirausaha",
+                summary: "Langkah mendasar membangun agensi pembuatan web atau servis komputer mandiri bagi lulusan SMK.",
+                date: "15 April 2026",
+                steps: [
+                    {
+                        title: "Tentukan Spesialisasi Jasa Utama",
+                        desc: "Sebagai pemula, fokuslah pada 1 atau 2 keahlian spesifik yang paling Anda kuasai bersama tim sekolah Anda. Misalnya: Jasa Pembuatan Website Profil Sekolah/UMKM, Jasa Instalasi Jaringan Kantor Lokal, atau Jasa Service Laptop panggilan."
+                    },
+                    {
+                        title: "Bangun Portofolio Studi Kasus",
+                        desc: "Sebelum mencari klien besar berbayar, tawarkan jasa Anda secara sukarela atau berbiaya murah kepada UMKM terdekat, keluarga, atau proyek sekolah. Dokumentasikan hasil kerja tersebut dalam bentuk portofolio digital (situs web atau PDF presentasi)."
+                    },
+                    {
+                        title: "Susun Paket Harga yang Jelas",
+                        desc: "Hindari menawarkan tarif secara acak. Buat paket-paket harga yang transparan dengan batasan fitur/layanan yang jelas agar calon klien merasa aman dan percaya dengan kredibilitas profesionalisme Anda."
+                    },
+                    {
+                        title: "Lakukan Pemasaran Lokal dan Digital",
+                        desc: "Daftarkan bisnis rintisan Anda di Google Maps (Google My Business) agar warga sekitar mudah menemukan Anda. Buat akun media sosial aktif (Instagram & TikTok) untuk membagikan konten edukatif seputar solusi IT sehari-hari."
+                    }
+                ],
+                proTips: [
+                    "Bekerjasamalah dengan sesama alumni SMK lintas jurusan untuk membentuk tim yang solid (misal: Jurusan TKJ berkolaborasi dengan RPL dan DKV).",
+                    "Selalu buat kesepakatan tertulis (kontrak kerja sederhana) dengan klien sebelum proyek dimulai."
+                ],
+                avoidMistakes: [
+                    "Memberikan janji berlebihan (over-promising) yang tidak sanggup direalisasikan oleh kapasitas tim.",
+                    "Mengabaikan layanan purna jual (after-sales service) yang membuat pelanggan tidak mau menggunakan jasa Anda kembali."
+                ]
+            }
+        ];
+
+        // Dapatkan ID Artikel dari Parameter URL
+        const urlParams = new URLSearchParams(window.location.search);
+        let articleId = parseInt(urlParams.get('id'));
+
+        // PENANGANAN PINTAR: Jika ID tidak ada atau bukan angka, gunakan ID: 1 sebagai default (Agar tidak kosong)
+        if (isNaN(articleId)) {
+            articleId = 1;
+        }
+
+        // Cari artikel berdasarkan ID
+        const article = tipsData.find(item => item.id === articleId);
+
+        // Render data ke halaman
+        if (article) {
+            // Update Breadcrumb & Page Title
+            document.title = `${article.title} - BKK SMKN 1 Garut`;
+            document.getElementById('breadcrumb-title').innerText = article.title;
+            
+            // Update Text Details
+            document.getElementById('detail-category').innerText = article.category;
+            document.getElementById('detail-date').innerText = article.date;
+            document.getElementById('detail-title').innerText = article.title;
+            document.getElementById('detail-summary').innerText = article.summary;
+
+            // Render Dynamic Interactive Progress Bar (Step-by-Step Navigation)
+            const progressContainer = document.getElementById('progress-indicator-container');
+            article.steps.forEach((step, index) => {
+                const stepNum = index + 1;
+                
+                // Elemen lingkaran langkah
+                const stepWrapper = document.createElement('a');
+                stepWrapper.href = `#step-${stepNum}`;
+                stepWrapper.className = "relative z-10 flex flex-col items-center group cursor-pointer";
+                
+                stepWrapper.innerHTML = `
+                    <div class="w-10 h-10 rounded-full bg-blue-100 group-hover:bg-blue-600 text-blue-600 group-hover:text-white border-2 border-white shadow flex items-center justify-center font-bold text-sm transition-all duration-300">
+                        ${stepNum}
+                    </div>
+                    <span class="absolute top-12 text-[10px] md:text-xs font-semibold text-slate-500 group-hover:text-blue-600 transition whitespace-nowrap hidden sm:block">Langkah ${stepNum}</span>
+                `;
+                progressContainer.appendChild(stepWrapper);
+            });
+
+            // Render Content Step-by-Step
+            const contentArea = document.getElementById('detail-rich-content');
+            article.steps.forEach((step, index) => {
+                const stepNum = index + 1;
+                
+                const stepBlock = document.createElement('section');
+                stepBlock.id = `step-${stepNum}`;
+                stepBlock.className = "scroll-mt-24 space-y-3 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-slate-50/50 transition duration-300";
+                
+                stepBlock.innerHTML = `
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-sm flex items-center justify-center shadow-md">
+                            ${stepNum}
+                        </div>
+                        <div class="space-y-2 flex-grow">
+                            <h2 class="text-xl font-bold text-slate-900">${step.title}</h2>
+                            <p class="text-slate-600 leading-relaxed text-sm md:text-base">${step.desc}</p>
+                        </div>
+                    </div>
+                `;
+                contentArea.appendChild(stepBlock);
+            });
+
+            // Render Pro Tips
+            const proTipsArea = document.getElementById('detail-pro-tips');
+            article.proTips.forEach(tip => {
+                const li = document.createElement('li');
+                li.innerText = tip;
+                proTipsArea.appendChild(li);
+            });
+
+            // Render Avoid Mistakes
+            const avoidMistakesArea = document.getElementById('detail-avoid-mistakes');
+            article.avoidMistakes.forEach(mistake => {
+                const li = document.createElement('li');
+                li.innerText = mistake;
+                avoidMistakesArea.appendChild(li);
+            });
+
+            // Render Recommendations (Sidebar)
+            const recArea = document.getElementById('recommendations-container');
+            const recommendedArticles = tipsData.filter(item => item.id !== articleId).slice(0, 3);
+            
+            recommendedArticles.forEach(rec => {
+                const recLink = document.createElement('a');
+                recLink.href = `detail.html?id=${rec.id}`;
+                recLink.className = "flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition group";
+                
+                recLink.innerHTML = `
+                    <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                    <div class="space-y-1">
+                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wide block">${rec.category}</span>
+                        <h4 class="text-xs md:text-sm font-bold text-slate-800 group-hover:text-blue-600 transition line-clamp-2 leading-snug">${rec.title}</h4>
+                    </div>
+                `;
+                recArea.appendChild(recLink);
+            });
+
+        } else {
+            // JIKA MEMANG ID SALAH (Misal ID 999): Tampilkan error container terstruktur dengan daftar alternatif aktif
+            document.getElementById('article-container').classList.add('hidden');
+            const errorContainer = document.getElementById('error-container');
+            errorContainer.classList.remove('hidden');
+
+            const quickLinksArea = document.getElementById('error-quick-links');
+            // Menampilkan pilihan panduan alternatif di dalam kotak kesalahan agar tidak terlihat kosong sama sekali
+            tipsData.forEach(item => {
+                const link = document.createElement('a');
+                link.href = `detail.html?id=${item.id}`;
+                link.className = "p-3.5 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-xl flex items-center justify-between text-slate-700 font-semibold text-sm transition group";
+                link.innerHTML = `
+                    <span>${item.title}</span>
+                    <i class="fa-solid fa-arrow-right text-blue-500 group-hover:translate-x-1 transition-transform"></i>
+                `;
+                quickLinksArea.appendChild(link);
+            });
+        }
+
+        // Toggle Hamburger Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Pengatur Ukuran Font untuk Kenyamanan Membaca
+        let currentSize = 100; // Persentase font dasar
+        function changeFontSize(action) {
+            const content = document.getElementById('detail-rich-content');
+            if (action === 'inc' && currentSize < 130) {
+                currentSize += 10;
+            } else if (action === 'dec' && currentSize > 90) {
+                currentSize -= 10;
+            }
+            content.style.fontSize = `${currentSize}%`;
+        }
+
+        // Fungsi Salin Link ke Clipboard
+        function copyToClipboard() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            // Tampilkan Toast Sukses
+            const toast = document.getElementById('share-toast');
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 5000);
+        }
+
+        // Fungsi Simulasi Berbagi ke Media Sosial
+        function shareSocial(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(article ? article.title : "Panduan Karir Alumni SMKN 1 Garut");
+            let shareUrl = "";
+
+            if (platform === 'wa') {
+                shareUrl = `https://api.whatsapp.com/send?text=${title}%20-%20${url}`;
+            } else if (platform === 'fb') {
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            } else if (platform === 'tw') {
+                shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+            }
+
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // Penanganan Masukan Feedback Alumni
+        function handleFeedback(status) {
+            document.getElementById('feedback-buttons').classList.add('hidden');
+            document.getElementById('feedback-thanks').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
