@@ -273,13 +273,22 @@
     display: grid;
     grid-template-columns: 1fr 340px;
     gap: 20px;
+    align-items: start;
+  }
+
+  /* Right column structure to hold Ringkasan and Perusahaan Teratas separately */
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .card {
     background: #fff;
     border: 1px solid #e2e8f0;
-    border-radius: 14px;
+    border-radius: 16px;
     padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
   }
 
   .card-title {
@@ -289,6 +298,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    color: #1e293b;
   }
 
   .card-title i { color: #f59e0b; font-size: 17px; }
@@ -344,39 +354,53 @@
     margin-bottom: 16px;
   }
 
+  .progress-track:last-of-type {
+    margin-bottom: 0;
+  }
+
   .progress-fill { height: 100%; border-radius: 99px; }
   .fill-amber { background: #f59e0b; width: 66%; }
   .fill-green { background: #16a34a; width: 100%; }
 
-  .section-divider {
-    font-size: 14px;
-    font-weight: 700;
-    padding-top: 16px;
-    margin-bottom: 14px;
-    border-top: 1px solid #f1f5f9;
-  }
-
-  .company-row {
+  /* Company Card Item Layout (Matching Photo 2) */
+  .company-card-item {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 12px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 11px 0;
-    border-bottom: 1px solid #f8fafc;
+    margin-bottom: 12px;
   }
 
-  .company-row:last-child { border-bottom: none; }
-  .company-name { font-size: 13px; font-weight: 700; }
-  .company-type { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+  .company-card-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .company-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e293b;
+  }
+
+  .company-type {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 1px;
+  }
 
   .badge {
     font-size: 11px;
     font-weight: 700;
-    padding: 4px 12px;
+    padding: 6px 12px;
     border-radius: 99px;
+    white-space: nowrap;
   }
 
-  .badge-blue { background: #eff6ff; color: #1d4ed8; }
-  .badge-gray { background: #f1f5f9; color: #475569; }
+  .badge-blue {
+    background: #eff6ff;
+    color: #1d4ed8;
+  }
 </style>
 </head>
 <body>
@@ -542,42 +566,53 @@
         </div>
       </div>
 
-      <!-- Ringkasan -->
-      <div class="card">
-        <div class="card-title">Ringkasan</div>
+      <!-- Right Column containing Ringkasan and Perusahaan Teratas with modern styling -->
+      <div class="right-column">
+        
+        <!-- Card 1: Ringkasan -->
+        <div class="card">
+          <div class="card-title" style="margin-bottom: 16px;">Ringkasan</div>
 
-        <div class="summary-row">
-          <span class="lbl">Lamaran Pending</span>
-          <span class="val">2</span>
-        </div>
-        <div class="progress-track">
-          <div class="progress-fill fill-amber"></div>
-        </div>
-
-        <div class="summary-row">
-          <span class="lbl">Lowongan Aktif</span>
-          <span class="val">1</span>
-        </div>
-        <div class="progress-track">
-          <div class="progress-fill fill-green"></div>
-        </div>
-
-        <div class="section-divider">Perusahaan Teratas</div>
-
-        <div class="company-row">
-          <div>
-            <div class="company-name">Tahu 2026</div>
-            <div class="company-type">tahu digital</div>
+          <div class="summary-row">
+            <span class="lbl">Lamaran Pending</span>
+            <span class="val">2</span>
           </div>
-          <span class="badge badge-blue">1 Lowongan</span>
-        </div>
-        <div class="company-row">
-          <div>
-            <div class="company-name">PT. Maju Jaya</div>
-            <div class="company-type">Technology</div>
+          <div class="progress-track">
+            <div class="progress-fill fill-amber"></div>
           </div>
-          <span class="badge badge-gray">0 Lowongan</span>
+
+          <div class="summary-row">
+            <span class="lbl">Lowongan Aktif</span>
+            <span class="val">1</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill fill-green"></div>
+          </div>
         </div>
+
+        <!-- Card 2: Perusahaan Teratas (Separated with gap and modern layout) -->
+        <div class="card">
+          <div class="card-title" style="margin-bottom: 16px;">Perusahaan Teratas</div>
+
+          <!-- Company Item 1 -->
+          <div class="company-card-item">
+            <div>
+              <div class="company-name">Tahu 2026</div>
+              <div class="company-type">tahu digital</div>
+            </div>
+            <span class="badge badge-blue">1 Lowongan</span>
+          </div>
+
+          <!-- Company Item 2 -->
+          <div class="company-card-item">
+            <div>
+              <div class="company-name">PT. Maju Jaya</div>
+              <div class="company-type">Technology</div>
+            </div>
+            <span class="badge badge-blue">0 Lowongan</span>
+          </div>
+        </div>
+
       </div>
 
     </div>

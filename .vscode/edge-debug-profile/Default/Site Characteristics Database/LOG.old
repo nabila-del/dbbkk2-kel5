@@ -1,5 +1,3 @@
-2026/05/19-10:02:55.590 49c4 Log #3: 1 ops saved to Table #4 OK
-2026/05/19-10:02:55.610 49c4 Archiving C:\aurelbkk\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Site Characteristics Database/000003.log: OK
-2026/05/19-10:02:55.610 49c4 Table #4: 1 entries OK
-2026/05/19-10:02:55.613 49c4 Archiving C:\aurelbkk\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Site Characteristics Database/MANIFEST-000001: OK
-2026/05/19-10:02:55.623 49c4 **** Repaired leveldb C:\aurelbkk\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Site Characteristics Database; recovered 1 files; 130 bytes. Some data may have been lost. ****
+2026/06/04-10:00:43.805 3b4c Reusing MANIFEST C:\laragon\www\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Site Characteristics Database/MANIFEST-000001
+2026/06/04-10:00:43.806 3b4c Recovering log #3
+2026/06/04-10:00:43.807 3b4c Reusing old log C:\laragon\www\dbbkk2-kel5\.vscode\edge-debug-profile\Default\Site Characteristics Database/000003.log 
